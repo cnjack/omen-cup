@@ -289,7 +289,7 @@
 
     .bracket {
       position: relative;
-      width: 100%; min-width: 1600px; height: 820px;
+      width: 100%; min-width: 1600px; height: 950px;
       overflow: hidden; isolation: isolate;
       background:
         linear-gradient(90deg, rgba(255, 255, 255, 0.024) 1px, transparent 1px) 0 0 / 114px 100%,
@@ -370,7 +370,7 @@
     /* ─── SVG connectors ─── */
     .connectors {
       position: absolute; z-index: 0; inset: 0;
-      width: 1600px; height: 820px; pointer-events: none;
+      width: 1600px; height: 950px; pointer-events: none;
     }
 
     .connectors path {
@@ -861,7 +861,7 @@
 
           &lt;!-- Group labels --&gt;
           &lt;div class=&quot;group-pill a&quot; style=&quot;top:88px;&quot;&gt;A 组&lt;/div&gt;
-          &lt;div class=&quot;group-pill b&quot; style=&quot;top:460px;&quot;&gt;B 组&lt;/div&gt;
+          &lt;div class=&quot;group-pill b&quot; style=&quot;top:485px;&quot;&gt;B 组&lt;/div&gt;
 
           &lt;!-- ─── SVG Connectors ─── --&gt;
           &lt;!--
@@ -894,7 +894,7 @@
 
             M10 top=267 left comp y=316  right comp y=352  right-center y=334
           --&gt;
-          &lt;svg class=&quot;connectors&quot; viewBox=&quot;0 0 1600 820&quot; aria-hidden=&quot;true&quot;&gt;
+          &lt;svg class=&quot;connectors&quot; viewBox=&quot;0 0 1600 950&quot; aria-hidden=&quot;true&quot;&gt;
 
             &lt;!-- GROUP A: M1,M2,M3 → converge to draw gate at (300,262) → R2 --&gt;
             &lt;path d=&quot;M206 127 H240 V262 H300&quot; /&gt;
@@ -908,20 +908,20 @@
             &lt;path class=&quot;bye-path&quot;  d=&quot;M342 262 V150 H380&quot; /&gt;
 
             &lt;!-- GROUP B: M4,M5 → converge to draw gate at (300,572) → R2 --&gt;
-            &lt;path d=&quot;M206 522 H240 V595 H300&quot; /&gt;
-            &lt;path d=&quot;M206 667 H240 V595&quot; /&gt;
-            &lt;rect class=&quot;draw-gate&quot; x=&quot;295&quot; y=&quot;590&quot; width=&quot;10&quot; height=&quot;10&quot; transform=&quot;rotate(45 300 595)&quot; /&gt;
+            &lt;path d=&quot;M206 547 H240 V635 H300&quot; /&gt;
+            &lt;path d=&quot;M206 722 H240 V635&quot; /&gt;
+            &lt;rect class=&quot;draw-gate&quot; x=&quot;295&quot; y=&quot;630&quot; width=&quot;10&quot; height=&quot;10&quot; transform=&quot;rotate(45 300 635)&quot; /&gt;
 
             &lt;!-- Gate → M7 top comp and Bye-B --&gt;
-            &lt;path class=&quot;draw-path&quot; d=&quot;M305 595 H342 V597 H380&quot; /&gt;
-            &lt;path class=&quot;bye-path&quot;  d=&quot;M342 595 V492 H380&quot; /&gt;
+            &lt;path class=&quot;draw-path&quot; d=&quot;M305 635 H342 V597 H380&quot; /&gt;
+            &lt;path class=&quot;bye-path&quot;  d=&quot;M342 635 V492 H380&quot; /&gt;
 
             &lt;!-- SHP (R1 direct pass) → M7 bottom comp --&gt;
-            &lt;path d=&quot;M206 772 H300 V633 H380&quot; /&gt;
+            &lt;path d=&quot;M206 852 H300 V633 H380&quot; /&gt;
 
             &lt;!-- Labels --&gt;
             &lt;text class=&quot;line-label&quot; x=&quot;213&quot; y=&quot;253&quot;&gt;抽签&lt;/text&gt;
-            &lt;text class=&quot;line-label&quot; x=&quot;213&quot; y=&quot;586&quot;&gt;抽签&lt;/text&gt;
+            &lt;text class=&quot;line-label&quot; x=&quot;213&quot; y=&quot;626&quot;&gt;抽签&lt;/text&gt;
 
             &lt;!-- ROUND 2 → SEMIFINALS --&gt;
             &lt;!-- M6 right-center → M8 top comp --&gt;
@@ -1005,7 +1005,7 @@
           &lt;/article&gt;
 
           &lt;!-- ─── ROUND 1 · B GROUP ─── --&gt;
-          &lt;article class=&quot;match&quot; style=&quot;left:26px; top:455px; --order:4&quot; aria-label=&quot;M4&quot;&gt;
+          &lt;article class=&quot;match&quot; style=&quot;left:26px; top:480px; --order:4&quot; aria-label=&quot;M4&quot;&gt;
             &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M4&lt;/span&gt;&lt;small&gt;B 组 · 亚海悬城 · BO1&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor&quot;&gt;
@@ -1025,7 +1025,7 @@
             &lt;/div&gt;
           &lt;/article&gt;
 
-          &lt;article class=&quot;match&quot; style=&quot;left:26px; top:600px; --order:5&quot; aria-label=&quot;M5&quot;&gt;
+          &lt;article class=&quot;match&quot; style=&quot;left:26px; top:655px; --order:5&quot; aria-label=&quot;M5&quot;&gt;
             &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M5&lt;/span&gt;&lt;small&gt;B 组 · 亚海悬城 · BO1&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor&quot;&gt;
@@ -1046,7 +1046,7 @@
           &lt;/article&gt;
 
           &lt;!-- SHP: direct bye in Round 1 --&gt;
-          &lt;div class=&quot;bye-block direct&quot; style=&quot;left:26px; top:740px; --order:6&quot; aria-label=&quot;SHP 直通&quot;&gt;
+          &lt;div class=&quot;bye-block direct&quot; style=&quot;left:26px; top:820px; --order:6&quot; aria-label=&quot;SHP 直通&quot;&gt;
             &lt;div class=&quot;bye-block-inner&quot;&gt;
               &lt;div&gt;
                 &lt;span class=&quot;bye-label&quot;&gt;B 组 · 直通&lt;/span&gt;
