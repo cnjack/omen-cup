@@ -791,9 +791,14 @@
         transition-duration: 0.01ms !important;
       }
     }
-    .side { display:inline-block; margin-left:5px; padding:1px 5px; font-size:8px; font-weight:900; letter-spacing:.1em; border-radius:2px; vertical-align:middle; text-transform:uppercase; }
-    .side.def { background:rgba(66,180,255,.18); color:#6DD5FF; border:1px solid rgba(66,180,255,.35); }
-    .side.atk { background:rgba(255,70,85,.18); color:#FF8090; border:1px solid rgba(255,70,85,.35); }
+    /* map-bar */
+    .map-bar { display:flex; align-items:center; gap:5px; padding:2px 8px 3px; background:rgba(255,70,85,.06); border-bottom:1px solid rgba(255,70,85,.18); font-family:var(--display); font-size:7px; font-weight:900; letter-spacing:.12em; color:rgba(255,70,85,.7); text-transform:none; }
+    .map-bar::before { content:`; width:6px; height:6px; flex-shrink:0; background:rgba(255,70,85,.6); clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%); }
+    /* side badge */
+    .team-tag { display:flex !important; align-items:center; gap:5px; overflow:visible !important; text-overflow:unset !important; }
+    .side { flex-shrink:0; padding:1px 5px; font-size:7px; font-weight:900; letter-spacing:.08em; border-radius:2px; line-height:14px; }
+    .side.def { background:rgba(66,180,255,.15); color:#6DD5FF; border:1px solid rgba(66,180,255,.3); }
+    .side.atk { background:rgba(255,70,85,.15); color:#FF8090; border:1px solid rgba(255,70,85,.3); }
   &lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
@@ -980,20 +985,21 @@
           &lt;/article&gt;
 
           &lt;article class=&quot;match&quot; style=&quot;left:26px; top:330px; --order:3&quot; aria-label=&quot;M3&quot;&gt;
-            &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M3&lt;/span&gt;&lt;small&gt;A 组 · Opening · BO1 · 亚海悬城&lt;/small&gt;&lt;/div&gt;
+            &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M3&lt;/span&gt;&lt;small&gt;A 组 · Opening · BO1&lt;/small&gt;&lt;/div&gt;
+            &lt;div class=&quot;map-bar&quot;&gt;亚海悬城&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor&quot;&gt;
                 &lt;span class=&quot;seed&quot;&gt;DL&lt;/span&gt;
                 &lt;span class=&quot;team-copy&quot;&gt;
                   &lt;strong class=&quot;team-name&quot;&gt;争取不拿倒第一队&lt;/strong&gt;
-                  &lt;small class=&quot;team-tag&quot;&gt;HP · DL&lt;/small&gt;&lt;span class=&quot;side def&quot;&gt;守&lt;/span&gt;
+                  &lt;small class=&quot;team-tag&quot;&gt;HP · DL&lt;span class=&quot;side def&quot;&gt;守&lt;/span&gt;&lt;/small&gt;
                 &lt;/span&gt;
               &lt;/div&gt;
               &lt;div class=&quot;competitor&quot;&gt;
                 &lt;span class=&quot;seed&quot;&gt;TP&lt;/span&gt;
                 &lt;span class=&quot;team-copy&quot;&gt;
                   &lt;strong class=&quot;team-name&quot;&gt;台北慶記燒臘店&lt;/strong&gt;
-                  &lt;small class=&quot;team-tag&quot;&gt;HP · TP&lt;/small&gt;&lt;span class=&quot;side atk&quot;&gt;攻&lt;/span&gt;
+                  &lt;small class=&quot;team-tag&quot;&gt;HP · TP&lt;span class=&quot;side atk&quot;&gt;攻&lt;/span&gt;&lt;/small&gt;
                 &lt;/span&gt;
               &lt;/div&gt;
             &lt;/div&gt;
@@ -1001,40 +1007,42 @@
 
           &lt;!-- ─── ROUND 1 · B GROUP ─── --&gt;
           &lt;article class=&quot;match&quot; style=&quot;left:26px; top:455px; --order:4&quot; aria-label=&quot;M4&quot;&gt;
-            &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M4&lt;/span&gt;&lt;small&gt;B 组 · Opening · BO1 · 亚海悬城&lt;/small&gt;&lt;/div&gt;
+            &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M4&lt;/span&gt;&lt;small&gt;B 组 · Opening · BO1&lt;/small&gt;&lt;/div&gt;
+            &lt;div class=&quot;map-bar&quot;&gt;亚海悬城&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor&quot;&gt;
                 &lt;span class=&quot;seed&quot;&gt;B1&lt;/span&gt;
                 &lt;span class=&quot;team-copy&quot;&gt;
                   &lt;strong class=&quot;team-name&quot;&gt;HP BRG 1&lt;/strong&gt;
-                  &lt;small class=&quot;team-tag&quot;&gt;HP · BRG1&lt;/small&gt;&lt;span class=&quot;side atk&quot;&gt;攻&lt;/span&gt;
+                  &lt;small class=&quot;team-tag&quot;&gt;HP · BRG1&lt;span class=&quot;side atk&quot;&gt;攻&lt;/span&gt;&lt;/small&gt;
                 &lt;/span&gt;
               &lt;/div&gt;
               &lt;div class=&quot;competitor&quot;&gt;
                 &lt;span class=&quot;seed&quot;&gt;B2&lt;/span&gt;
                 &lt;span class=&quot;team-copy&quot;&gt;
                   &lt;strong class=&quot;team-name&quot;&gt;HP BRG 2&lt;/strong&gt;
-                  &lt;small class=&quot;team-tag&quot;&gt;HP · BRG2&lt;/small&gt;&lt;span class=&quot;side def&quot;&gt;守&lt;/span&gt;
+                  &lt;small class=&quot;team-tag&quot;&gt;HP · BRG2&lt;span class=&quot;side def&quot;&gt;守&lt;/span&gt;&lt;/small&gt;
                 &lt;/span&gt;
               &lt;/div&gt;
             &lt;/div&gt;
           &lt;/article&gt;
 
           &lt;article class=&quot;match&quot; style=&quot;left:26px; top:555px; --order:5&quot; aria-label=&quot;M5&quot;&gt;
-            &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M5&lt;/span&gt;&lt;small&gt;B 组 · Opening · BO1 · 亚海悬城&lt;/small&gt;&lt;/div&gt;
+            &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M5&lt;/span&gt;&lt;small&gt;B 组 · Opening · BO1&lt;/small&gt;&lt;/div&gt;
+            &lt;div class=&quot;map-bar&quot;&gt;亚海悬城&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor&quot;&gt;
                 &lt;span class=&quot;seed&quot;&gt;M1&lt;/span&gt;
                 &lt;span class=&quot;team-copy&quot;&gt;
                   &lt;strong class=&quot;team-name&quot;&gt;HP 混编 1&lt;/strong&gt;
-                  &lt;small class=&quot;team-tag&quot;&gt;HP · 混编1&lt;/small&gt;&lt;span class=&quot;side atk&quot;&gt;攻&lt;/span&gt;
+                  &lt;small class=&quot;team-tag&quot;&gt;HP · 混编1&lt;span class=&quot;side atk&quot;&gt;攻&lt;/span&gt;&lt;/small&gt;
                 &lt;/span&gt;
               &lt;/div&gt;
               &lt;div class=&quot;competitor&quot;&gt;
                 &lt;span class=&quot;seed&quot;&gt;M2&lt;/span&gt;
                 &lt;span class=&quot;team-copy&quot;&gt;
                   &lt;strong class=&quot;team-name&quot;&gt;HP 混编 2&lt;/strong&gt;
-                  &lt;small class=&quot;team-tag&quot;&gt;HP · 混编2&lt;/small&gt;&lt;span class=&quot;side def&quot;&gt;守&lt;/span&gt;
+                  &lt;small class=&quot;team-tag&quot;&gt;HP · 混编2&lt;span class=&quot;side def&quot;&gt;守&lt;/span&gt;&lt;/small&gt;
                 &lt;/span&gt;
               &lt;/div&gt;
             &lt;/div&gt;
