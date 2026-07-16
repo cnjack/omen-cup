@@ -298,7 +298,7 @@
 
     .bracket {
       position: relative;
-      width: 100%; min-width: 1600px; height: 950px;
+      width: 100%; min-width: 1600px; height: 1000px;
       overflow: hidden; isolation: isolate;
       background:
         linear-gradient(90deg, rgba(255, 255, 255, 0.024) 1px, transparent 1px) 0 0 / 114px 100%,
@@ -887,46 +887,48 @@
             GF right edge x      = 995   (815 + 180)
 
             M1 top=80   → right-center y = 147
-            M2 top=220  → right-center y = 287
-            M3 top=360  → right-center y = 427
-            M4 top=535  → right-center y = 602
-            M5 top=675  → right-center y = 742
-            SHP top=815 → right-center y = 847  (bye-block: 815+32)
+            M2 top=230  → right-center y = 297
+            M3 top=380  → right-center y = 447
+            M4 top=560  → right-center y = 627
+            M5 top=710  → right-center y = 777
+            SHP top=860 → right-center y = 892  (bye-block: 860+32)
 
-            M6 top=273  left comp y=322  right comp y=358  right-center y=340
-            M7 top=585  left comp y=634  right comp y=670  right-center y=652
-            BYE-A top=143  center y=175
-            BYE-B top=497  center y=529
+            Gate A: y=297  Gate B: y=702
 
-            M8 top=120  left comp y=169  right comp y=205  right-center y=187
-            M9 top=442  left comp y=491  right comp y=527  right-center y=509
+            M6 top=283  left comp y=332  right comp y=368  right-center y=350
+            M7 top=678  left comp y=727  right comp y=763  right-center y=745
+            BYE-A top=153  center y=185
+            BYE-B top=520  center y=552
 
-            M10 top=298 left comp y=347  right comp y=383  right-center y=365
+            M8 top=231  left comp y=280  right comp y=316  right-center y=298
+            M9 top=596  left comp y=645  right comp y=681  right-center y=663
+
+            M10 top=414 left comp y=463  right comp y=499  right-center y=481
           --&gt;
-          &lt;svg class=&quot;connectors&quot; viewBox=&quot;0 0 1600 950&quot; aria-hidden=&quot;true&quot;&gt;
+          &lt;svg class=&quot;connectors&quot; viewBox=&quot;0 0 1600 1000&quot; aria-hidden=&quot;true&quot;&gt;
 
             &lt;!-- GROUP A: M1,M2,M3 → converge to draw gate at (300,262) → R2 --&gt;
-            &lt;path d=&quot;M206 147 H240 V287 H300&quot; /&gt;
-            &lt;path d=&quot;M206 287 H300&quot; /&gt;
-            &lt;path d=&quot;M206 427 H240 V287&quot; /&gt;
-            &lt;rect class=&quot;draw-gate&quot; x=&quot;295&quot; y=&quot;282&quot; width=&quot;10&quot; height=&quot;10&quot; transform=&quot;rotate(45 300 287)&quot; /&gt;
+            &lt;path d=&quot;M206 147 H240 V297 H300&quot; /&gt;
+            &lt;path d=&quot;M206 297 H300&quot; /&gt;
+            &lt;path d=&quot;M206 447 H240 V297&quot; /&gt;
+            &lt;rect class=&quot;draw-gate&quot; x=&quot;295&quot; y=&quot;292&quot; width=&quot;10&quot; height=&quot;10&quot; transform=&quot;rotate(45 300 297)&quot; /&gt;
 
             &lt;!-- Gate → M6 top comp, bottom comp, and Bye-A --&gt;
-            &lt;path class=&quot;draw-path&quot; d=&quot;M305 287 H342 V322 H380&quot; /&gt;
-            &lt;path class=&quot;draw-path&quot; d=&quot;M342 287 V358 H380&quot; /&gt;
-            &lt;path class=&quot;bye-path&quot;  d=&quot;M342 287 V175 H380&quot; /&gt;
+            &lt;path class=&quot;draw-path&quot; d=&quot;M305 297 H342 V332 H380&quot; /&gt;
+            &lt;path class=&quot;draw-path&quot; d=&quot;M342 297 V368 H380&quot; /&gt;
+            &lt;path class=&quot;bye-path&quot;  d=&quot;M342 297 V185 H380&quot; /&gt;
 
             &lt;!-- GROUP B: M4,M5 → converge to draw gate at (300,572) → R2 --&gt;
-            &lt;path d=&quot;M206 602 H240 V672 H300&quot; /&gt;
-            &lt;path d=&quot;M206 742 H240 V672&quot; /&gt;
-            &lt;rect class=&quot;draw-gate&quot; x=&quot;295&quot; y=&quot;667&quot; width=&quot;10&quot; height=&quot;10&quot; transform=&quot;rotate(45 300 672)&quot; /&gt;
+            &lt;path d=&quot;M206 627 H240 V702 H300&quot; /&gt;
+            &lt;path d=&quot;M206 777 H240 V702&quot; /&gt;
+            &lt;rect class=&quot;draw-gate&quot; x=&quot;295&quot; y=&quot;697&quot; width=&quot;10&quot; height=&quot;10&quot; transform=&quot;rotate(45 300 702)&quot; /&gt;
 
             &lt;!-- Gate → M7 top comp and Bye-B --&gt;
-            &lt;path class=&quot;draw-path&quot; d=&quot;M305 672 H342 V634 H380&quot; /&gt;
-            &lt;path class=&quot;bye-path&quot;  d=&quot;M342 672 V529 H380&quot; /&gt;
+            &lt;path class=&quot;draw-path&quot; d=&quot;M305 702 H342 V727 H380&quot; /&gt;
+            &lt;path class=&quot;bye-path&quot;  d=&quot;M342 702 V552 H380&quot; /&gt;
 
             &lt;!-- SHP (R1 direct pass) → M7 bottom comp --&gt;
-            &lt;path d=&quot;M206 847 H300 V670 H380&quot; /&gt;
+            &lt;path d=&quot;M206 892 H300 V763 H380&quot; /&gt;
 
             &lt;!-- Labels --&gt;
             &lt;text class=&quot;line-label&quot; x=&quot;213&quot; y=&quot;278&quot;&gt;抽签&lt;/text&gt;
@@ -934,21 +936,21 @@
 
             &lt;!-- ROUND 2 → SEMIFINALS --&gt;
             &lt;!-- M6 right-center → M8 top comp --&gt;
-            &lt;path d=&quot;M560 340 H645 V169 H730&quot; /&gt;
+            &lt;path d=&quot;M560 350 H645 V280 H730&quot; /&gt;
             &lt;!-- Bye-A right → M8 bottom comp --&gt;
-            &lt;path class=&quot;bye-path&quot; d=&quot;M560 175 H645 V205 H730&quot; /&gt;
+            &lt;path class=&quot;bye-path&quot; d=&quot;M560 185 H645 V316 H730&quot; /&gt;
 
             &lt;!-- M7 right-center → M9 top comp --&gt;
-            &lt;path d=&quot;M560 652 H645 V491 H730&quot; /&gt;
+            &lt;path d=&quot;M560 745 H645 V645 H730&quot; /&gt;
             &lt;!-- Bye-B right → M9 bottom comp --&gt;
-            &lt;path class=&quot;bye-path&quot; d=&quot;M560 529 H645 V527 H730&quot; /&gt;
+            &lt;path class=&quot;bye-path&quot; d=&quot;M560 552 H645 V681 H730&quot; /&gt;
 
             &lt;!-- SEMIFINALS → GRAND FINAL (champion paths) --&gt;
-            &lt;path class=&quot;champion-path&quot; d=&quot;M910 187 H985 V347 H1060&quot; /&gt;
-            &lt;path class=&quot;champion-path&quot; d=&quot;M910 509 H985 V383 H1060&quot; /&gt;
+            &lt;path class=&quot;champion-path&quot; d=&quot;M910 298 H985 V463 H1060&quot; /&gt;
+            &lt;path class=&quot;champion-path&quot; d=&quot;M910 663 H985 V499 H1060&quot; /&gt;
 
             &lt;!-- GRAND FINAL → CHAMPION --&gt;
-            &lt;path class=&quot;champion-path&quot; d=&quot;M1240 365 H1330&quot; /&gt;
+            &lt;path class=&quot;champion-path&quot; d=&quot;M1240 481 H1330&quot; /&gt;
 
           &lt;/svg&gt;
 
@@ -973,7 +975,7 @@
             &lt;/div&gt;
           &lt;/article&gt;
 
-          &lt;article class=&quot;match&quot; style=&quot;left:26px; top:195px; --order:2&quot; aria-label=&quot;M2&quot;&gt;
+          &lt;article class=&quot;match&quot; style=&quot;left:26px; top:230px; --order:2&quot; aria-label=&quot;M2&quot;&gt;
             &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M2&lt;/span&gt;&lt;small&gt;A 组 · 亚海悬城 · 7/22 18:00 · BO1&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor&quot;&gt;
@@ -993,7 +995,7 @@
             &lt;/div&gt;
           &lt;/article&gt;
 
-          &lt;article class=&quot;match&quot; style=&quot;left:26px; top:330px; --order:3&quot; aria-label=&quot;M3&quot;&gt;
+          &lt;article class=&quot;match&quot; style=&quot;left:26px; top:380px; --order:3&quot; aria-label=&quot;M3&quot;&gt;
             &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M3&lt;/span&gt;&lt;small&gt;A 组 · 亚海悬城 · 7/21 20:00 · BO1&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor&quot;&gt;
@@ -1014,7 +1016,7 @@
           &lt;/article&gt;
 
           &lt;!-- ─── ROUND 1 · B GROUP ─── --&gt;
-          &lt;article class=&quot;match&quot; style=&quot;left:26px; top:480px; --order:4&quot; aria-label=&quot;M4&quot;&gt;
+          &lt;article class=&quot;match&quot; style=&quot;left:26px; top:560px; --order:4&quot; aria-label=&quot;M4&quot;&gt;
             &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M4&lt;/span&gt;&lt;small&gt;B 组 · 亚海悬城 · 7/23 9:30 · BO1&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor&quot;&gt;
@@ -1034,7 +1036,7 @@
             &lt;/div&gt;
           &lt;/article&gt;
 
-          &lt;article class=&quot;match&quot; style=&quot;left:26px; top:655px; --order:5&quot; aria-label=&quot;M5&quot;&gt;
+          &lt;article class=&quot;match&quot; style=&quot;left:26px; top:710px; --order:5&quot; aria-label=&quot;M5&quot;&gt;
             &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M5&lt;/span&gt;&lt;small&gt;B 组 · 亚海悬城 · 7/20 20:00 · BO1&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor&quot;&gt;
@@ -1055,7 +1057,7 @@
           &lt;/article&gt;
 
           &lt;!-- SHP: direct bye in Round 1 --&gt;
-          &lt;div class=&quot;bye-block direct&quot; style=&quot;left:26px; top:820px; --order:6&quot; aria-label=&quot;SHP 直通&quot;&gt;
+          &lt;div class=&quot;bye-block direct&quot; style=&quot;left:26px; top:860px; --order:6&quot; aria-label=&quot;SHP 直通&quot;&gt;
             &lt;div class=&quot;bye-block-inner&quot;&gt;
               &lt;div&gt;
                 &lt;span class=&quot;bye-label&quot;&gt;B 组 · 直通&lt;/span&gt;
@@ -1068,7 +1070,7 @@
 
           &lt;!-- ─── ROUND 2 ─── --&gt;
           &lt;!-- 直通半决赛 A: drawn from M1/M2/M3 winners --&gt;
-          &lt;div class=&quot;bye-block&quot; style=&quot;left:380px; top:118px; --order:7&quot; aria-label=&quot;A 组直通半决赛&quot;&gt;
+          &lt;div class=&quot;bye-block&quot; style=&quot;left:380px; top:153px; --order:7&quot; aria-label=&quot;A 组直通半决赛&quot;&gt;
             &lt;div class=&quot;bye-block-inner&quot;&gt;
               &lt;div&gt;
                 &lt;span class=&quot;bye-label&quot;&gt;A 组 · 直通半决赛&lt;/span&gt;
@@ -1080,7 +1082,7 @@
           &lt;/div&gt;
 
           &lt;!-- M6: 2 of M1/M2/M3 winners fight --&gt;
-          &lt;article class=&quot;match flow&quot; style=&quot;left:380px; top:248px; --order:8&quot; aria-label=&quot;M6&quot;&gt;
+          &lt;article class=&quot;match flow&quot; style=&quot;left:380px; top:283px; --order:8&quot; aria-label=&quot;M6&quot;&gt;
             &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M6&lt;/span&gt;&lt;small&gt;Round 2 · A 组抽签 · BO1&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor&quot;&gt;
@@ -1101,7 +1103,7 @@
           &lt;/article&gt;
 
           &lt;!-- 直通半决赛 B: drawn from M4/M5 winners --&gt;
-          &lt;div class=&quot;bye-block&quot; style=&quot;left:380px; top:460px; --order:9&quot; aria-label=&quot;B 组直通半决赛&quot;&gt;
+          &lt;div class=&quot;bye-block&quot; style=&quot;left:380px; top:520px; --order:9&quot; aria-label=&quot;B 组直通半决赛&quot;&gt;
             &lt;div class=&quot;bye-block-inner&quot;&gt;
               &lt;div&gt;
                 &lt;span class=&quot;bye-label&quot;&gt;B 组 · 直通半决赛&lt;/span&gt;
@@ -1113,7 +1115,7 @@
           &lt;/div&gt;
 
           &lt;!-- M7: 1 of M4/M5 winners vs SHP --&gt;
-          &lt;article class=&quot;match flow&quot; style=&quot;left:380px; top:548px; --order:10&quot; aria-label=&quot;M7&quot;&gt;
+          &lt;article class=&quot;match flow&quot; style=&quot;left:380px; top:678px; --order:10&quot; aria-label=&quot;M7&quot;&gt;
             &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M7&lt;/span&gt;&lt;small&gt;Round 2 · B 组抽签 · BO1&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor&quot;&gt;
@@ -1134,7 +1136,7 @@
           &lt;/article&gt;
 
           &lt;!-- ─── SEMIFINALS ─── --&gt;
-          &lt;article class=&quot;match flow&quot; style=&quot;left:730px; top:95px; --order:11&quot; aria-label=&quot;M8&quot;&gt;
+          &lt;article class=&quot;match flow&quot; style=&quot;left:730px; top:231px; --order:11&quot; aria-label=&quot;M8&quot;&gt;
             &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M8&lt;/span&gt;&lt;small&gt;Semi Final · BO1&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor&quot;&gt;
@@ -1154,7 +1156,7 @@
             &lt;/div&gt;
           &lt;/article&gt;
 
-          &lt;article class=&quot;match flow&quot; style=&quot;left:730px; top:405px; --order:12&quot; aria-label=&quot;M9&quot;&gt;
+          &lt;article class=&quot;match flow&quot; style=&quot;left:730px; top:596px; --order:12&quot; aria-label=&quot;M9&quot;&gt;
             &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M9&lt;/span&gt;&lt;small&gt;Semi Final · BO1&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor&quot;&gt;
@@ -1175,7 +1177,7 @@
           &lt;/article&gt;
 
           &lt;!-- ─── GRAND FINAL ─── --&gt;
-          &lt;article class=&quot;match final&quot; style=&quot;left:1060px; top:267px; --order:13&quot; aria-label=&quot;M10 总决赛&quot;&gt;
+          &lt;article class=&quot;match final&quot; style=&quot;left:1060px; top:414px; --order:13&quot; aria-label=&quot;M10 总决赛&quot;&gt;
             &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M10&lt;/span&gt;&lt;small&gt;Grand Final · 8月20日 · BO3&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor&quot;&gt;
@@ -1222,8 +1224,8 @@
           &lt;/div&gt;
 
           &lt;!-- Route notes --&gt;
-          &lt;div class=&quot;route-note&quot; style=&quot;left:218px; top:270px;&quot;&gt;M1/M2/M3 胜者&lt;br&gt;3选1直通&lt;br&gt;2队对战&lt;/div&gt;
-          &lt;div class=&quot;route-note&quot; style=&quot;left:218px; top:572px;&quot;&gt;M4/M5 胜者&lt;br&gt;抽签对阵 SHP&lt;/div&gt;
+          
+          
 
           &lt;!-- Legend --&gt;
           &lt;div class=&quot;legend&quot; aria-hidden=&quot;true&quot;&gt;
