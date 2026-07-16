@@ -887,68 +887,68 @@
             GF right edge x      = 995   (815 + 180)
 
             M1 top=80   → right-center y = 147
-            M2 top=195  → right-center y = 262
-            M3 top=330  → right-center y = 397
-            M4 top=455  → right-center y = 522
-            M5 top=555  → right-center y = 622
-            SHP top=655 → right-center y = 687  (bye-block: 655+32)
+            M2 top=220  → right-center y = 287
+            M3 top=360  → right-center y = 427
+            M4 top=535  → right-center y = 602
+            M5 top=675  → right-center y = 742
+            SHP top=815 → right-center y = 847  (bye-block: 815+32)
 
-            M6 top=248  left comp y=297  right comp y=333  right-center y=315
-            M7 top=548  left comp y=597  right comp y=633  right-center y=615
-            BYE-A top=118  center y=150
-            BYE-B top=460  center y=492
+            M6 top=273  left comp y=322  right comp y=358  right-center y=340
+            M7 top=585  left comp y=634  right comp y=670  right-center y=652
+            BYE-A top=143  center y=175
+            BYE-B top=497  center y=529
 
-            M8 top=95   left comp y=144  right comp y=180  right-center y=162
-            M9 top=405  left comp y=454  right comp y=490  right-center y=472
+            M8 top=120  left comp y=169  right comp y=205  right-center y=187
+            M9 top=442  left comp y=491  right comp y=527  right-center y=509
 
-            M10 top=267 left comp y=316  right comp y=352  right-center y=334
+            M10 top=298 left comp y=347  right comp y=383  right-center y=365
           --&gt;
           &lt;svg class=&quot;connectors&quot; viewBox=&quot;0 0 1600 950&quot; aria-hidden=&quot;true&quot;&gt;
 
             &lt;!-- GROUP A: M1,M2,M3 → converge to draw gate at (300,262) → R2 --&gt;
-            &lt;path d=&quot;M206 147 H240 V262 H300&quot; /&gt;
-            &lt;path d=&quot;M206 262 H300&quot; /&gt;
-            &lt;path d=&quot;M206 397 H240 V262&quot; /&gt;
-            &lt;rect class=&quot;draw-gate&quot; x=&quot;295&quot; y=&quot;257&quot; width=&quot;10&quot; height=&quot;10&quot; transform=&quot;rotate(45 300 262)&quot; /&gt;
+            &lt;path d=&quot;M206 147 H240 V287 H300&quot; /&gt;
+            &lt;path d=&quot;M206 287 H300&quot; /&gt;
+            &lt;path d=&quot;M206 427 H240 V287&quot; /&gt;
+            &lt;rect class=&quot;draw-gate&quot; x=&quot;295&quot; y=&quot;282&quot; width=&quot;10&quot; height=&quot;10&quot; transform=&quot;rotate(45 300 287)&quot; /&gt;
 
             &lt;!-- Gate → M6 top comp, bottom comp, and Bye-A --&gt;
-            &lt;path class=&quot;draw-path&quot; d=&quot;M305 262 H342 V297 H380&quot; /&gt;
-            &lt;path class=&quot;draw-path&quot; d=&quot;M342 262 V333 H380&quot; /&gt;
-            &lt;path class=&quot;bye-path&quot;  d=&quot;M342 262 V150 H380&quot; /&gt;
+            &lt;path class=&quot;draw-path&quot; d=&quot;M305 287 H342 V322 H380&quot; /&gt;
+            &lt;path class=&quot;draw-path&quot; d=&quot;M342 287 V358 H380&quot; /&gt;
+            &lt;path class=&quot;bye-path&quot;  d=&quot;M342 287 V175 H380&quot; /&gt;
 
             &lt;!-- GROUP B: M4,M5 → converge to draw gate at (300,572) → R2 --&gt;
-            &lt;path d=&quot;M206 547 H240 V635 H300&quot; /&gt;
-            &lt;path d=&quot;M206 722 H240 V635&quot; /&gt;
-            &lt;rect class=&quot;draw-gate&quot; x=&quot;295&quot; y=&quot;630&quot; width=&quot;10&quot; height=&quot;10&quot; transform=&quot;rotate(45 300 635)&quot; /&gt;
+            &lt;path d=&quot;M206 602 H240 V672 H300&quot; /&gt;
+            &lt;path d=&quot;M206 742 H240 V672&quot; /&gt;
+            &lt;rect class=&quot;draw-gate&quot; x=&quot;295&quot; y=&quot;667&quot; width=&quot;10&quot; height=&quot;10&quot; transform=&quot;rotate(45 300 672)&quot; /&gt;
 
             &lt;!-- Gate → M7 top comp and Bye-B --&gt;
-            &lt;path class=&quot;draw-path&quot; d=&quot;M305 635 H342 V597 H380&quot; /&gt;
-            &lt;path class=&quot;bye-path&quot;  d=&quot;M342 635 V492 H380&quot; /&gt;
+            &lt;path class=&quot;draw-path&quot; d=&quot;M305 672 H342 V634 H380&quot; /&gt;
+            &lt;path class=&quot;bye-path&quot;  d=&quot;M342 672 V529 H380&quot; /&gt;
 
             &lt;!-- SHP (R1 direct pass) → M7 bottom comp --&gt;
-            &lt;path d=&quot;M206 852 H300 V633 H380&quot; /&gt;
+            &lt;path d=&quot;M206 847 H300 V670 H380&quot; /&gt;
 
             &lt;!-- Labels --&gt;
-            &lt;text class=&quot;line-label&quot; x=&quot;213&quot; y=&quot;253&quot;&gt;抽签&lt;/text&gt;
-            &lt;text class=&quot;line-label&quot; x=&quot;213&quot; y=&quot;626&quot;&gt;抽签&lt;/text&gt;
+            &lt;text class=&quot;line-label&quot; x=&quot;213&quot; y=&quot;278&quot;&gt;抽签&lt;/text&gt;
+            &lt;text class=&quot;line-label&quot; x=&quot;213&quot; y=&quot;663&quot;&gt;抽签&lt;/text&gt;
 
             &lt;!-- ROUND 2 → SEMIFINALS --&gt;
             &lt;!-- M6 right-center → M8 top comp --&gt;
-            &lt;path d=&quot;M560 315 H645 V144 H730&quot; /&gt;
+            &lt;path d=&quot;M560 340 H645 V169 H730&quot; /&gt;
             &lt;!-- Bye-A right → M8 bottom comp --&gt;
-            &lt;path class=&quot;bye-path&quot; d=&quot;M560 150 H645 V180 H730&quot; /&gt;
+            &lt;path class=&quot;bye-path&quot; d=&quot;M560 175 H645 V205 H730&quot; /&gt;
 
             &lt;!-- M7 right-center → M9 top comp --&gt;
-            &lt;path d=&quot;M560 615 H645 V454 H730&quot; /&gt;
+            &lt;path d=&quot;M560 652 H645 V491 H730&quot; /&gt;
             &lt;!-- Bye-B right → M9 bottom comp --&gt;
-            &lt;path class=&quot;bye-path&quot; d=&quot;M560 492 H645 V490 H730&quot; /&gt;
+            &lt;path class=&quot;bye-path&quot; d=&quot;M560 529 H645 V527 H730&quot; /&gt;
 
             &lt;!-- SEMIFINALS → GRAND FINAL (champion paths) --&gt;
-            &lt;path class=&quot;champion-path&quot; d=&quot;M910 162 H985 V316 H1060&quot; /&gt;
-            &lt;path class=&quot;champion-path&quot; d=&quot;M910 472 H985 V352 H1060&quot; /&gt;
+            &lt;path class=&quot;champion-path&quot; d=&quot;M910 187 H985 V347 H1060&quot; /&gt;
+            &lt;path class=&quot;champion-path&quot; d=&quot;M910 509 H985 V383 H1060&quot; /&gt;
 
             &lt;!-- GRAND FINAL → CHAMPION --&gt;
-            &lt;path class=&quot;champion-path&quot; d=&quot;M1240 334 H1330&quot; /&gt;
+            &lt;path class=&quot;champion-path&quot; d=&quot;M1240 365 H1330&quot; /&gt;
 
           &lt;/svg&gt;
 
