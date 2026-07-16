@@ -135,6 +135,8 @@
 
     button { font: inherit; }
 
+    *, *::before, *::after { box-sizing: border-box; }
+
     .page-shell {
       width: min(100%, 1880px);
       margin: 0 auto;
@@ -298,74 +300,79 @@
 
     .bracket {
       position: relative;
-      width: 100%; min-width: 1600px; height: 1000px;
+      width: 100%; min-width: 1700px; height: 1100px;
       overflow: hidden; isolation: isolate;
       background:
-        linear-gradient(90deg, rgba(255, 255, 255, 0.024) 1px, transparent 1px) 0 0 / 114px 100%,
-        radial-gradient(circle at 58% 44%, rgba(255, 70, 85, 0.06), transparent 26rem),
-        linear-gradient(145deg, rgba(80, 0, 8, 0.12), transparent 34%),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.022) 1px, transparent 1px) 0 0 / 132px 100%,
+        linear-gradient(180deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px) 0 0 / 100% 128px,
+        radial-gradient(circle at 62% 44%, rgba(255, 70, 85, 0.05), transparent 28rem),
+        linear-gradient(145deg, rgba(80, 0, 8, 0.08), transparent 36%),
         #0b1620;
     }
 
     .bracket::before {
-      position: absolute; z-index: -1; top: 260px; left: 560px;
-      color: rgba(255, 255, 255, 0.016); content: &quot;OMEN&quot;;
-      font-family: var(--display); font-size: 224px; font-weight: 1000;
+      position: absolute; z-index: -1; top: 332px; left: 640px;
+      color: rgba(255, 255, 255, 0.018); content: &quot;OMEN&quot;;
+      font-family: var(--display); font-size: 250px; font-weight: 1000;
       letter-spacing: -0.08em; transform: skew(-8deg);
     }
 
     .bracket::after {
       position: absolute; z-index: -1; inset: 0; content: &quot;&quot;;
-      opacity: 0.18;
+      opacity: 0.12;
       background-image:
-        repeating-radial-gradient(circle at 12% 22%, var(--accent) 0 1px, transparent 1px 17px),
-        linear-gradient(18deg, transparent 58%, rgba(255, 70, 85, 0.12) 58.2% 58.35%, transparent 58.6%);
-      background-size: 260px 210px, 680px 440px;
-      mask-image: linear-gradient(90deg, #000, transparent 72%);
+        repeating-radial-gradient(circle at 12% 22%, rgba(255, 70, 85, 0.55) 0 1px, transparent 1px 18px),
+        linear-gradient(20deg, transparent 58%, rgba(255, 70, 85, 0.08) 58.2% 58.35%, transparent 58.6%);
+      background-size: 290px 230px, 760px 480px;
+      mask-image: linear-gradient(90deg, #000, transparent 78%);
     }
 
     /* ─── Stage labels ─── */
     .stage-label {
-      position: absolute; z-index: 3; top: 20px; width: 210px;
-      color: rgba(255, 255, 255, 0.42);
-      font-family: var(--display); font-size: 10px; font-weight: 900;
-      letter-spacing: 0.22em; text-transform: uppercase;
+      position: absolute; z-index: 3; top: 28px; width: 224px;
+      padding-bottom: 12px;
+      color: rgba(255, 255, 255, 0.5);
+      font-family: var(--display); font-size: 11px; font-weight: 900;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .stage-label::after {
-      display: block; width: 28px; height: 2px; margin-top: 9px; content: &quot;&quot;;
+      display: block; width: 34px; height: 2px; margin-top: 10px; content: &quot;&quot;;
       background: var(--accent); box-shadow: 0 0 12px var(--accent);
     }
 
     .stage-label b {
-      display: block; margin-bottom: 3px; color: #fff;
-      font-size: 16px; letter-spacing: 0.08em;
+      display: block; margin-bottom: 4px; color: #fff;
+      font-size: 18px; letter-spacing: 0.06em;
     }
 
     .stage-label .date {
-      display: block; margin-top: 3px; color: var(--accent);
-      font-size: 9px; opacity: 0.85;
+      display: block; margin-top: 4px; color: var(--accent);
+      font-size: 10px; opacity: 0.9;
     }
 
     .stage-label .venue {
-      display: block; margin-top: 5px;
-      color: rgba(255,255,255,0.32);
-      font-size: 8px; font-weight: 700;
-      letter-spacing: 0.04em; text-transform: none; line-height: 1.35;
+      display: block; margin-top: 6px;
+      color: rgba(255,255,255,0.38);
+      font-size: 9px; font-weight: 700;
+      letter-spacing: 0.04em; text-transform: none; line-height: 1.4;
     }
 
-    .stage-label.s1 { left: 26px; }
-    .stage-label.s2 { left: 380px; }
-    .stage-label.s3 { left: 730px; }
-    .stage-label.s4 { left: 1060px; }
-    .stage-label.s5 { left: 1330px; }
+    .stage-label.s1 { left: 40px; }
+    .stage-label.s2 { left: 420px; }
+    .stage-label.s3 { left: 820px; }
+    .stage-label.s4 { left: 1200px; }
+    .stage-label.s5 { left: 1470px; }
 
     /* ─── Group divider labels ─── */
     .group-pill {
-      position: absolute; z-index: 3; left: 7px;
-      padding: 2px 8px;
-      font-family: var(--display); font-size: 8px; font-weight: 900;
-      letter-spacing: 0.22em; text-transform: uppercase;
+      position: absolute; z-index: 3; left: 14px;
+      padding: 4px 10px;
+      font-family: var(--display); font-size: 9px; font-weight: 900;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      background: rgba(9, 14, 18, 0.86);
+      backdrop-filter: blur(3px);
     }
 
     .group-pill.a {
@@ -379,24 +386,24 @@
     /* ─── SVG connectors ─── */
     .connectors {
       position: absolute; z-index: 0; inset: 0;
-      width: 1600px; height: 950px; pointer-events: none;
+      width: 1700px; height: 1100px; pointer-events: none;
     }
 
     .connectors path {
       fill: none;
-      stroke: rgba(255, 255, 255, 0.55);
-      stroke-width: 1.5;
+      stroke: rgba(255, 255, 255, 0.48);
+      stroke-width: 1.6;
       vector-effect: non-scaling-stroke;
     }
 
     .connectors .draw-path {
-      stroke: rgba(255, 70, 85, 0.75);
+      stroke: rgba(255, 70, 85, 0.82);
       stroke-dasharray: 6 4;
     }
 
     .connectors .bye-path {
-      stroke: rgba(255, 255, 255, 0.28);
-      stroke-dasharray: 3 6;
+      stroke: rgba(255, 255, 255, 0.22);
+      stroke-dasharray: 4 6;
     }
 
     .connectors .champion-path {
@@ -412,14 +419,14 @@
     }
 
     .line-label {
-      fill: rgba(255, 70, 85, 0.85);
+      fill: rgba(255, 70, 85, 0.92);
       font-family: var(--display);
-      font-size: 10px; font-weight: 900; letter-spacing: 0.14em;
+      font-size: 10px; font-weight: 900; letter-spacing: 0.12em;
     }
 
     /* ─── Match cards ─── */
     .match {
-      position: absolute; z-index: 2; width: 180px;
+      position: absolute; z-index: 2; width: 224px;
       animation: match-in 520ms cubic-bezier(0.2, 0.85, 0.28, 1) both;
       animation-delay: calc(var(--order, 0) * 42ms);
     }
@@ -430,15 +437,17 @@
     }
 
     .match-head {
-      display: flex; align-items: end; justify-content: space-between;
-      height: 44px; padding: 0 6px 8px;
+      display: grid; align-content: center; gap: 4px;
+      height: 42px; padding: 7px 10px 8px;
       color: #fff; font-family: var(--display);
-      font-size: 16px; font-weight: 1000; letter-spacing: 0.05em;
+      font-size: 18px; font-weight: 1000; letter-spacing: 0.04em;
     }
 
+    .match-head > span { display: block; line-height: 1; }
+
     .match-head small {
-      color: rgba(255, 255, 255, 0.65); font-size: 11px; font-weight: 800;
-      letter-spacing: 0.12em; text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.72); font-size: 10px; font-weight: 800;
+      letter-spacing: 0.08em; text-transform: uppercase; line-height: 1.05;
     }
 
     .match-body {
@@ -460,9 +469,9 @@
 
     .competitor {
       display: grid;
-      grid-template-columns: 28px minmax(0, 1fr);
-      align-items: center; min-height: 36px;
-      padding: 4px 10px 4px 7px;
+      grid-template-columns: 32px minmax(0, 1fr);
+      align-items: center; height: 36px;
+      padding: 4px 12px 4px 8px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.11);
     }
 
@@ -470,7 +479,7 @@
 
     .seed {
       color: rgba(255, 255, 255, 0.48); font-family: var(--display);
-      font-size: 8px; font-weight: 900; letter-spacing: 0.05em;
+      font-size: 9px; font-weight: 900; letter-spacing: 0.05em;
     }
 
     .team-copy { min-width: 0; }
@@ -479,12 +488,12 @@
       display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
     }
 
-    .team-name { color: #fff; font-size: 12px; font-weight: 800; line-height: 1.15; }
+    .team-name { color: #fff; font-size: 13px; font-weight: 800; line-height: 1.1; }
 
     .team-tag {
-      margin-top: 2px; color: rgba(255, 255, 255, 0.46);
-      font-family: var(--display); font-size: 8px; font-weight: 700;
-      letter-spacing: 0.07em; text-transform: uppercase;
+      margin-top: 2px; color: rgba(255, 255, 255, 0.5);
+      font-family: var(--display); font-size: 8.5px; font-weight: 700;
+      letter-spacing: 0.05em; text-transform: uppercase;
     }
 
     /* Flow / draw variant */
@@ -502,32 +511,32 @@
 
     /* ─── Bye block ─── */
     .bye-block {
-      position: absolute; z-index: 2; width: 180px;
+      position: absolute; z-index: 2; width: 224px;
       animation: match-in 520ms cubic-bezier(0.2, 0.85, 0.28, 1) both;
       animation-delay: calc(var(--order, 0) * 42ms);
     }
 
     .bye-block-inner {
       display: flex; align-items: center; justify-content: space-between;
-      min-height: 65px; padding: 10px 11px;
+      min-height: 72px; padding: 11px 13px;
       border: 1px dashed rgba(255, 255, 255, 0.18);
       background: rgba(255, 255, 255, 0.016);
       clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
     }
 
     .bye-label {
-      font-family: var(--display); font-size: 9px; font-weight: 900;
-      letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted);
+      font-family: var(--display); font-size: 10px; font-weight: 900;
+      letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);
     }
 
     .bye-team {
-      display: block; font-size: 13px; font-weight: 800; color: #fff; margin-top: 3px;
+      display: block; font-size: 14px; font-weight: 800; color: #fff; margin-top: 4px;
     }
 
     .bye-tag {
-      display: block; font-family: var(--display); font-size: 8px; font-weight: 700;
-      color: rgba(255,255,255,0.38); letter-spacing: 0.1em;
-      text-transform: uppercase; margin-top: 2px;
+      display: block; font-family: var(--display); font-size: 8.5px; font-weight: 700;
+      color: rgba(255,255,255,0.42); letter-spacing: 0.08em;
+      text-transform: uppercase; margin-top: 3px;
     }
 
     .bye-badge {
@@ -547,9 +556,9 @@
     /* ─── Champion ─── */
     .champion {
       position: absolute; z-index: 2;
-      width: 168px;
+      width: 184px;
       display: flex; flex-direction: column; align-items: center;
-      padding: 18px 14px 20px;
+      padding: 20px 16px 22px;
       border: 1px solid rgba(255, 70, 85, 0.62);
       background:
         radial-gradient(ellipse at 50% 28%, rgba(255, 70, 85, 0.22) 0%, transparent 62%),
@@ -611,7 +620,7 @@
 
     /* ─── Legend ─── */
     .legend {
-      position: absolute; z-index: 3; right: 28px; bottom: 20px;
+      position: absolute; z-index: 3; right: 32px; bottom: 24px;
       display: flex; gap: 18px;
       color: rgba(255,255,255,0.46); font-family: var(--display);
       font-size: 9px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase;
@@ -869,93 +878,93 @@
           &lt;/div&gt;
 
           &lt;!-- Group labels --&gt;
-          &lt;div class=&quot;group-pill a&quot; style=&quot;top:88px;&quot;&gt;A 组&lt;/div&gt;
-          &lt;div class=&quot;group-pill b&quot; style=&quot;top:485px;&quot;&gt;B 组&lt;/div&gt;
+          &lt;div class=&quot;group-pill a&quot; style=&quot;top:100px;&quot;&gt;A 组&lt;/div&gt;
+          &lt;div class=&quot;group-pill b&quot; style=&quot;top:612px;&quot;&gt;B 组&lt;/div&gt;
 
           &lt;!-- ─── SVG Connectors ─── --&gt;
           &lt;!--
             Key y-values (match top + offset):
-              Match head = 31px; each competitor = 36px
-              Top comp center  = top + 31 + 18 = top + 49
-              Bottom comp center = top + 31 + 54 = top + 85
-              Match mid (right connector) = top + 67
-              Bye block center = top + 32
+              Match head = 42px; each competitor = 36px
+              Top comp center = top + 60
+              Bottom comp center = top + 96
+              Match mid (right connector) = top + 78
+              Bye block center = top + 36
 
-            Round-1 right edge x = 206   (26 + 180)
-            Round-2 right edge x = 465   (285 + 180)
-            Semi right edge x    = 728   (548 + 180)
-            GF right edge x      = 995   (815 + 180)
+            Round-1 right edge x = 264   (40 + 224)
+            Round-2 right edge x = 644   (420 + 224)
+            Semi right edge x    = 1044  (820 + 224)
+            GF right edge x      = 1424  (1200 + 224)
 
-            M1 top=80   → right-center y = 147
-            M2 top=230  → right-center y = 297
-            M3 top=380  → right-center y = 447
-            M4 top=560  → right-center y = 627
-            M5 top=710  → right-center y = 777
-            SHP top=860 → right-center y = 892  (bye-block: 860+32)
+            M1 top=120 → right-center y = 198
+            M2 top=276 → right-center y = 354
+            M3 top=432 → right-center y = 510
+            M4 top=632 → right-center y = 710
+            M5 top=788 → right-center y = 866
+            SHP top=944 → center y = 980
 
-            Gate A: y=297  Gate B: y=702
+            Gate A: y=354  Gate B: y=788
 
-            M6 top=283  left comp y=332  right comp y=368  right-center y=350
-            M7 top=678  left comp y=727  right comp y=763  right-center y=745
-            BYE-A top=153  center y=185
-            BYE-B top=520  center y=552
+            BYE-A top=170 center y=206
+            M6 top=344 left comp y=404 right comp y=440 right-center y=422
+            BYE-B top=682 center y=718
+            M7 top=838 left comp y=898 right comp y=934 right-center y=916
 
-            M8 top=231  left comp y=280  right comp y=316  right-center y=298
-            M9 top=596  left comp y=645  right comp y=681  right-center y=663
+            M8 top=252 left comp y=312 right comp y=348 right-center y=330
+            M9 top=750 left comp y=810 right comp y=846 right-center y=828
 
-            M10 top=414 left comp y=463  right comp y=499  right-center y=481
+            M10 top=500 left comp y=560 right comp y=596 right-center y=578
           --&gt;
-          &lt;svg class=&quot;connectors&quot; viewBox=&quot;0 0 1600 1000&quot; aria-hidden=&quot;true&quot;&gt;
+          &lt;svg class=&quot;connectors&quot; viewBox=&quot;0 0 1700 1100&quot; aria-hidden=&quot;true&quot;&gt;
 
             &lt;!-- GROUP A: M1,M2,M3 → converge to draw gate at (300,262) → R2 --&gt;
-            &lt;path d=&quot;M206 160 H240 V310 H300&quot; /&gt;
-            &lt;path d=&quot;M206 310 H300&quot; /&gt;
-            &lt;path d=&quot;M206 460 H240 V310&quot; /&gt;
-            &lt;rect class=&quot;draw-gate&quot; x=&quot;295&quot; y=&quot;305&quot; width=&quot;10&quot; height=&quot;10&quot; transform=&quot;rotate(45 300 310)&quot; /&gt;
+            &lt;path d=&quot;M264 198 H300 V354 H340&quot; /&gt;
+            &lt;path d=&quot;M264 354 H340&quot; /&gt;
+            &lt;path d=&quot;M264 510 H300 V354 H340&quot; /&gt;
+            &lt;rect class=&quot;draw-gate&quot; x=&quot;335&quot; y=&quot;349&quot; width=&quot;10&quot; height=&quot;10&quot; transform=&quot;rotate(45 340 354)&quot; /&gt;
 
             &lt;!-- Gate → M6 top comp, bottom comp, and Bye-A --&gt;
-            &lt;path class=&quot;draw-path&quot; d=&quot;M305 310 H342 V327 H380&quot; /&gt;
-            &lt;path class=&quot;draw-path&quot; d=&quot;M342 310 V363 H380&quot; /&gt;
-            &lt;path class=&quot;bye-path&quot;  d=&quot;M342 310 V185 H380&quot; /&gt;
+            &lt;path class=&quot;draw-path&quot; d=&quot;M345 354 H382 V404 H420&quot; /&gt;
+            &lt;path class=&quot;draw-path&quot; d=&quot;M382 354 V440 H420&quot; /&gt;
+            &lt;path class=&quot;bye-path&quot;  d=&quot;M382 354 V206 H420&quot; /&gt;
 
             &lt;!-- GROUP B: M4,M5 → converge to draw gate at (300,572) → R2 --&gt;
-            &lt;path d=&quot;M206 640 H240 V715 H300&quot; /&gt;
-            &lt;path d=&quot;M206 790 H240 V715&quot; /&gt;
-            &lt;rect class=&quot;draw-gate&quot; x=&quot;295&quot; y=&quot;710&quot; width=&quot;10&quot; height=&quot;10&quot; transform=&quot;rotate(45 300 715)&quot; /&gt;
+            &lt;path d=&quot;M264 710 H300 V788 H340&quot; /&gt;
+            &lt;path d=&quot;M264 866 H300 V788 H340&quot; /&gt;
+            &lt;rect class=&quot;draw-gate&quot; x=&quot;335&quot; y=&quot;783&quot; width=&quot;10&quot; height=&quot;10&quot; transform=&quot;rotate(45 340 788)&quot; /&gt;
 
             &lt;!-- Gate → M7 top comp and Bye-B --&gt;
-            &lt;path class=&quot;draw-path&quot; d=&quot;M305 715 H342 V722 H380&quot; /&gt;
-            &lt;path class=&quot;bye-path&quot;  d=&quot;M342 715 V552 H380&quot; /&gt;
+            &lt;path class=&quot;draw-path&quot; d=&quot;M345 788 H382 V898 H420&quot; /&gt;
+            &lt;path class=&quot;bye-path&quot;  d=&quot;M382 788 V718 H420&quot; /&gt;
 
             &lt;!-- SHP (R1 direct pass) → M7 bottom comp --&gt;
-            &lt;path d=&quot;M206 892 H300 V758 H380&quot; /&gt;
+            &lt;path d=&quot;M264 980 H340 V934 H420&quot; /&gt;
 
             &lt;!-- Labels --&gt;
-            &lt;text class=&quot;line-label&quot; x=&quot;213&quot; y=&quot;278&quot;&gt;抽签&lt;/text&gt;
-            &lt;text class=&quot;line-label&quot; x=&quot;213&quot; y=&quot;663&quot;&gt;抽签&lt;/text&gt;
+            &lt;text class=&quot;line-label&quot; x=&quot;274&quot; y=&quot;344&quot;&gt;抽签&lt;/text&gt;
+            &lt;text class=&quot;line-label&quot; x=&quot;274&quot; y=&quot;778&quot;&gt;抽签&lt;/text&gt;
 
             &lt;!-- ROUND 2 → SEMIFINALS --&gt;
             &lt;!-- M6 right-center → M8 top comp --&gt;
-            &lt;path d=&quot;M560 363 H645 V275 H730&quot; /&gt;
+            &lt;path d=&quot;M644 422 H730 V312 H820&quot; /&gt;
             &lt;!-- Bye-A right → M8 bottom comp --&gt;
-            &lt;path class=&quot;bye-path&quot; d=&quot;M560 185 H645 V311 H730&quot; /&gt;
+            &lt;path class=&quot;bye-path&quot; d=&quot;M644 206 H730 V348 H820&quot; /&gt;
 
             &lt;!-- M7 right-center → M9 top comp --&gt;
-            &lt;path d=&quot;M560 758 H645 V640 H730&quot; /&gt;
+            &lt;path d=&quot;M644 916 H730 V810 H820&quot; /&gt;
             &lt;!-- Bye-B right → M9 bottom comp --&gt;
-            &lt;path class=&quot;bye-path&quot; d=&quot;M560 552 H645 V676 H730&quot; /&gt;
+            &lt;path class=&quot;bye-path&quot; d=&quot;M644 718 H730 V846 H820&quot; /&gt;
 
             &lt;!-- SEMIFINALS → GRAND FINAL (champion paths) --&gt;
-            &lt;path class=&quot;champion-path&quot; d=&quot;M910 311 H985 V458 H1060&quot; /&gt;
-            &lt;path class=&quot;champion-path&quot; d=&quot;M910 676 H985 V494 H1060&quot; /&gt;
+            &lt;path class=&quot;champion-path&quot; d=&quot;M1044 330 H1128 V560 H1200&quot; /&gt;
+            &lt;path class=&quot;champion-path&quot; d=&quot;M1044 828 H1128 V596 H1200&quot; /&gt;
 
             &lt;!-- GRAND FINAL → CHAMPION --&gt;
-            &lt;path class=&quot;champion-path&quot; d=&quot;M1240 494 H1330&quot; /&gt;
+            &lt;path class=&quot;champion-path&quot; d=&quot;M1424 578 H1470&quot; /&gt;
 
           &lt;/svg&gt;
 
           &lt;!-- ─── ROUND 1 · A GROUP ─── --&gt;
-          &lt;article class=&quot;match&quot; style=&quot;left:26px; top:80px; --order:1&quot; aria-label=&quot;M1&quot;&gt;
+          &lt;article class=&quot;match&quot; style=&quot;left:40px; top:120px; --order:1&quot; aria-label=&quot;M1&quot;&gt;
             &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M1&lt;/span&gt;&lt;small&gt;A 组 · 日落之城 · 7/20 19:00 · BO1&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor&quot;&gt;
@@ -975,7 +984,7 @@
             &lt;/div&gt;
           &lt;/article&gt;
 
-          &lt;article class=&quot;match&quot; style=&quot;left:26px; top:230px; --order:2&quot; aria-label=&quot;M2&quot;&gt;
+          &lt;article class=&quot;match&quot; style=&quot;left:40px; top:276px; --order:2&quot; aria-label=&quot;M2&quot;&gt;
             &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M2&lt;/span&gt;&lt;small&gt;A 组 · 亚海悬城 · 7/22 18:00 · BO1&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor&quot;&gt;
@@ -995,7 +1004,7 @@
             &lt;/div&gt;
           &lt;/article&gt;
 
-          &lt;article class=&quot;match&quot; style=&quot;left:26px; top:380px; --order:3&quot; aria-label=&quot;M3&quot;&gt;
+          &lt;article class=&quot;match&quot; style=&quot;left:40px; top:432px; --order:3&quot; aria-label=&quot;M3&quot;&gt;
             &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M3&lt;/span&gt;&lt;small&gt;A 组 · 亚海悬城 · 7/21 20:00 · BO1&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor&quot;&gt;
@@ -1016,7 +1025,7 @@
           &lt;/article&gt;
 
           &lt;!-- ─── ROUND 1 · B GROUP ─── --&gt;
-          &lt;article class=&quot;match&quot; style=&quot;left:26px; top:560px; --order:4&quot; aria-label=&quot;M4&quot;&gt;
+          &lt;article class=&quot;match&quot; style=&quot;left:40px; top:632px; --order:4&quot; aria-label=&quot;M4&quot;&gt;
             &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M4&lt;/span&gt;&lt;small&gt;B 组 · 亚海悬城 · 7/23 9:30 · BO1&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor&quot;&gt;
@@ -1036,7 +1045,7 @@
             &lt;/div&gt;
           &lt;/article&gt;
 
-          &lt;article class=&quot;match&quot; style=&quot;left:26px; top:710px; --order:5&quot; aria-label=&quot;M5&quot;&gt;
+          &lt;article class=&quot;match&quot; style=&quot;left:40px; top:788px; --order:5&quot; aria-label=&quot;M5&quot;&gt;
             &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M5&lt;/span&gt;&lt;small&gt;B 组 · 亚海悬城 · 7/20 20:00 · BO1&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor&quot;&gt;
@@ -1057,7 +1066,7 @@
           &lt;/article&gt;
 
           &lt;!-- SHP: direct bye in Round 1 --&gt;
-          &lt;div class=&quot;bye-block direct&quot; style=&quot;left:26px; top:860px; --order:6&quot; aria-label=&quot;SHP 直通&quot;&gt;
+          &lt;div class=&quot;bye-block direct&quot; style=&quot;left:40px; top:944px; --order:6&quot; aria-label=&quot;SHP 直通&quot;&gt;
             &lt;div class=&quot;bye-block-inner&quot;&gt;
               &lt;div&gt;
                 &lt;span class=&quot;bye-label&quot;&gt;B 组 · 直通&lt;/span&gt;
@@ -1070,7 +1079,7 @@
 
           &lt;!-- ─── ROUND 2 ─── --&gt;
           &lt;!-- 直通半决赛 A: drawn from M1/M2/M3 winners --&gt;
-          &lt;div class=&quot;bye-block&quot; style=&quot;left:380px; top:153px; --order:7&quot; aria-label=&quot;A 组直通半决赛&quot;&gt;
+          &lt;div class=&quot;bye-block&quot; style=&quot;left:420px; top:170px; --order:7&quot; aria-label=&quot;A 组直通半决赛&quot;&gt;
             &lt;div class=&quot;bye-block-inner&quot;&gt;
               &lt;div&gt;
                 &lt;span class=&quot;bye-label&quot;&gt;A 组 · 直通半决赛&lt;/span&gt;
@@ -1082,7 +1091,7 @@
           &lt;/div&gt;
 
           &lt;!-- M6: 2 of M1/M2/M3 winners fight --&gt;
-          &lt;article class=&quot;match flow&quot; style=&quot;left:380px; top:283px; --order:8&quot; aria-label=&quot;M6&quot;&gt;
+          &lt;article class=&quot;match flow&quot; style=&quot;left:420px; top:344px; --order:8&quot; aria-label=&quot;M6&quot;&gt;
             &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M6&lt;/span&gt;&lt;small&gt;Round 2 · A 组抽签 · BO1&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor&quot;&gt;
@@ -1103,7 +1112,7 @@
           &lt;/article&gt;
 
           &lt;!-- 直通半决赛 B: drawn from M4/M5 winners --&gt;
-          &lt;div class=&quot;bye-block&quot; style=&quot;left:380px; top:520px; --order:9&quot; aria-label=&quot;B 组直通半决赛&quot;&gt;
+          &lt;div class=&quot;bye-block&quot; style=&quot;left:420px; top:682px; --order:9&quot; aria-label=&quot;B 组直通半决赛&quot;&gt;
             &lt;div class=&quot;bye-block-inner&quot;&gt;
               &lt;div&gt;
                 &lt;span class=&quot;bye-label&quot;&gt;B 组 · 直通半决赛&lt;/span&gt;
@@ -1115,7 +1124,7 @@
           &lt;/div&gt;
 
           &lt;!-- M7: 1 of M4/M5 winners vs SHP --&gt;
-          &lt;article class=&quot;match flow&quot; style=&quot;left:380px; top:678px; --order:10&quot; aria-label=&quot;M7&quot;&gt;
+          &lt;article class=&quot;match flow&quot; style=&quot;left:420px; top:838px; --order:10&quot; aria-label=&quot;M7&quot;&gt;
             &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M7&lt;/span&gt;&lt;small&gt;Round 2 · B 组抽签 · BO1&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor&quot;&gt;
@@ -1136,7 +1145,7 @@
           &lt;/article&gt;
 
           &lt;!-- ─── SEMIFINALS ─── --&gt;
-          &lt;article class=&quot;match flow&quot; style=&quot;left:730px; top:231px; --order:11&quot; aria-label=&quot;M8&quot;&gt;
+          &lt;article class=&quot;match flow&quot; style=&quot;left:820px; top:252px; --order:11&quot; aria-label=&quot;M8&quot;&gt;
             &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M8&lt;/span&gt;&lt;small&gt;Semi Final · BO1&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor&quot;&gt;
@@ -1156,7 +1165,7 @@
             &lt;/div&gt;
           &lt;/article&gt;
 
-          &lt;article class=&quot;match flow&quot; style=&quot;left:730px; top:596px; --order:12&quot; aria-label=&quot;M9&quot;&gt;
+          &lt;article class=&quot;match flow&quot; style=&quot;left:820px; top:750px; --order:12&quot; aria-label=&quot;M9&quot;&gt;
             &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M9&lt;/span&gt;&lt;small&gt;Semi Final · BO1&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor&quot;&gt;
@@ -1177,7 +1186,7 @@
           &lt;/article&gt;
 
           &lt;!-- ─── GRAND FINAL ─── --&gt;
-          &lt;article class=&quot;match final&quot; style=&quot;left:1060px; top:414px; --order:13&quot; aria-label=&quot;M10 总决赛&quot;&gt;
+          &lt;article class=&quot;match final&quot; style=&quot;left:1200px; top:500px; --order:13&quot; aria-label=&quot;M10 总决赛&quot;&gt;
             &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M10&lt;/span&gt;&lt;small&gt;Grand Final · 8月20日 · BO3&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor&quot;&gt;
@@ -1198,7 +1207,7 @@
           &lt;/article&gt;
 
           &lt;!-- ─── CHAMPION ─── --&gt;
-          &lt;div class=&quot;champion&quot; style=&quot;left:1330px; top:387px;&quot; aria-label=&quot;最终冠军&quot;&gt;
+          &lt;div class=&quot;champion&quot; style=&quot;left:1470px; top:471px;&quot; aria-label=&quot;最终冠军&quot;&gt;
             &lt;svg class=&quot;champion-trophy&quot; viewBox=&quot;0 0 54 62&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; aria-hidden=&quot;true&quot;&gt;
               &lt;!-- Cup body --&gt;
               &lt;path d=&quot;M12 7 H42 V29 Q42 43 27 45 Q12 43 12 29 Z&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot; fill=&quot;rgba(80,215,255,0.13)&quot;/&gt;
