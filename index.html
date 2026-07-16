@@ -431,14 +431,14 @@
 
     .match-head {
       display: flex; align-items: end; justify-content: space-between;
-      height: 31px; padding: 0 4px 7px;
+      height: 44px; padding: 0 6px 8px;
       color: #fff; font-family: var(--display);
-      font-size: 14px; font-weight: 1000; letter-spacing: 0.05em;
+      font-size: 16px; font-weight: 1000; letter-spacing: 0.05em;
     }
 
     .match-head small {
-      color: rgba(255, 255, 255, 0.38); font-size: 9px; font-weight: 800;
-      letter-spacing: 0.16em; text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.65); font-size: 11px; font-weight: 800;
+      letter-spacing: 0.12em; text-transform: uppercase;
     }
 
     .match-body {
@@ -908,27 +908,27 @@
           &lt;svg class=&quot;connectors&quot; viewBox=&quot;0 0 1600 1000&quot; aria-hidden=&quot;true&quot;&gt;
 
             &lt;!-- GROUP A: M1,M2,M3 → converge to draw gate at (300,262) → R2 --&gt;
-            &lt;path d=&quot;M206 147 H240 V297 H300&quot; /&gt;
-            &lt;path d=&quot;M206 297 H300&quot; /&gt;
-            &lt;path d=&quot;M206 447 H240 V297&quot; /&gt;
-            &lt;rect class=&quot;draw-gate&quot; x=&quot;295&quot; y=&quot;292&quot; width=&quot;10&quot; height=&quot;10&quot; transform=&quot;rotate(45 300 297)&quot; /&gt;
+            &lt;path d=&quot;M206 160 H240 V310 H300&quot; /&gt;
+            &lt;path d=&quot;M206 310 H300&quot; /&gt;
+            &lt;path d=&quot;M206 460 H240 V310&quot; /&gt;
+            &lt;rect class=&quot;draw-gate&quot; x=&quot;295&quot; y=&quot;305&quot; width=&quot;10&quot; height=&quot;10&quot; transform=&quot;rotate(45 300 310)&quot; /&gt;
 
             &lt;!-- Gate → M6 top comp, bottom comp, and Bye-A --&gt;
-            &lt;path class=&quot;draw-path&quot; d=&quot;M305 297 H342 V332 H380&quot; /&gt;
-            &lt;path class=&quot;draw-path&quot; d=&quot;M342 297 V368 H380&quot; /&gt;
-            &lt;path class=&quot;bye-path&quot;  d=&quot;M342 297 V185 H380&quot; /&gt;
+            &lt;path class=&quot;draw-path&quot; d=&quot;M305 310 H342 V327 H380&quot; /&gt;
+            &lt;path class=&quot;draw-path&quot; d=&quot;M342 310 V363 H380&quot; /&gt;
+            &lt;path class=&quot;bye-path&quot;  d=&quot;M342 310 V185 H380&quot; /&gt;
 
             &lt;!-- GROUP B: M4,M5 → converge to draw gate at (300,572) → R2 --&gt;
-            &lt;path d=&quot;M206 627 H240 V702 H300&quot; /&gt;
-            &lt;path d=&quot;M206 777 H240 V702&quot; /&gt;
-            &lt;rect class=&quot;draw-gate&quot; x=&quot;295&quot; y=&quot;697&quot; width=&quot;10&quot; height=&quot;10&quot; transform=&quot;rotate(45 300 702)&quot; /&gt;
+            &lt;path d=&quot;M206 640 H240 V715 H300&quot; /&gt;
+            &lt;path d=&quot;M206 790 H240 V715&quot; /&gt;
+            &lt;rect class=&quot;draw-gate&quot; x=&quot;295&quot; y=&quot;710&quot; width=&quot;10&quot; height=&quot;10&quot; transform=&quot;rotate(45 300 715)&quot; /&gt;
 
             &lt;!-- Gate → M7 top comp and Bye-B --&gt;
-            &lt;path class=&quot;draw-path&quot; d=&quot;M305 702 H342 V727 H380&quot; /&gt;
-            &lt;path class=&quot;bye-path&quot;  d=&quot;M342 702 V552 H380&quot; /&gt;
+            &lt;path class=&quot;draw-path&quot; d=&quot;M305 715 H342 V722 H380&quot; /&gt;
+            &lt;path class=&quot;bye-path&quot;  d=&quot;M342 715 V552 H380&quot; /&gt;
 
             &lt;!-- SHP (R1 direct pass) → M7 bottom comp --&gt;
-            &lt;path d=&quot;M206 892 H300 V763 H380&quot; /&gt;
+            &lt;path d=&quot;M206 892 H300 V758 H380&quot; /&gt;
 
             &lt;!-- Labels --&gt;
             &lt;text class=&quot;line-label&quot; x=&quot;213&quot; y=&quot;278&quot;&gt;抽签&lt;/text&gt;
@@ -936,21 +936,21 @@
 
             &lt;!-- ROUND 2 → SEMIFINALS --&gt;
             &lt;!-- M6 right-center → M8 top comp --&gt;
-            &lt;path d=&quot;M560 350 H645 V280 H730&quot; /&gt;
+            &lt;path d=&quot;M560 363 H645 V275 H730&quot; /&gt;
             &lt;!-- Bye-A right → M8 bottom comp --&gt;
-            &lt;path class=&quot;bye-path&quot; d=&quot;M560 185 H645 V316 H730&quot; /&gt;
+            &lt;path class=&quot;bye-path&quot; d=&quot;M560 185 H645 V311 H730&quot; /&gt;
 
             &lt;!-- M7 right-center → M9 top comp --&gt;
-            &lt;path d=&quot;M560 745 H645 V645 H730&quot; /&gt;
+            &lt;path d=&quot;M560 758 H645 V640 H730&quot; /&gt;
             &lt;!-- Bye-B right → M9 bottom comp --&gt;
-            &lt;path class=&quot;bye-path&quot; d=&quot;M560 552 H645 V681 H730&quot; /&gt;
+            &lt;path class=&quot;bye-path&quot; d=&quot;M560 552 H645 V676 H730&quot; /&gt;
 
             &lt;!-- SEMIFINALS → GRAND FINAL (champion paths) --&gt;
-            &lt;path class=&quot;champion-path&quot; d=&quot;M910 298 H985 V463 H1060&quot; /&gt;
-            &lt;path class=&quot;champion-path&quot; d=&quot;M910 663 H985 V499 H1060&quot; /&gt;
+            &lt;path class=&quot;champion-path&quot; d=&quot;M910 311 H985 V458 H1060&quot; /&gt;
+            &lt;path class=&quot;champion-path&quot; d=&quot;M910 676 H985 V494 H1060&quot; /&gt;
 
             &lt;!-- GRAND FINAL → CHAMPION --&gt;
-            &lt;path class=&quot;champion-path&quot; d=&quot;M1240 481 H1330&quot; /&gt;
+            &lt;path class=&quot;champion-path&quot; d=&quot;M1240 494 H1330&quot; /&gt;
 
           &lt;/svg&gt;
 
@@ -1198,7 +1198,7 @@
           &lt;/article&gt;
 
           &lt;!-- ─── CHAMPION ─── --&gt;
-          &lt;div class=&quot;champion&quot; style=&quot;left:1330px; top:258px;&quot; aria-label=&quot;最终冠军&quot;&gt;
+          &lt;div class=&quot;champion&quot; style=&quot;left:1330px; top:387px;&quot; aria-label=&quot;最终冠军&quot;&gt;
             &lt;svg class=&quot;champion-trophy&quot; viewBox=&quot;0 0 54 62&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; aria-hidden=&quot;true&quot;&gt;
               &lt;!-- Cup body --&gt;
               &lt;path d=&quot;M12 7 H42 V29 Q42 43 27 45 Q12 43 12 29 Z&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot; fill=&quot;rgba(80,215,255,0.13)&quot;/&gt;
@@ -1625,9 +1625,9 @@
 
     .match-head {
       display: flex; align-items: end; justify-content: space-between;
-      height: 31px; padding: 0 4px 7px;
+      height: 44px; padding: 0 6px 8px;
       color: #fff; font-family: var(--display);
-      font-size: 14px; font-weight: 1000; letter-spacing: 0.05em;
+      font-size: 16px; font-weight: 1000; letter-spacing: 0.05em;
     }
 
     .match-head small {
@@ -2608,9 +2608,9 @@
 
     .match-head {
       display: flex; align-items: end; justify-content: space-between;
-      height: 31px; padding: 0 4px 7px;
+      height: 44px; padding: 0 6px 8px;
       color: #fff; font-family: var(--display);
-      font-size: 14px; font-weight: 1000; letter-spacing: 0.05em;
+      font-size: 16px; font-weight: 1000; letter-spacing: 0.05em;
     }
 
     .match-head small {
