@@ -220,14 +220,34 @@
       display: block;
       font-size: 10px;
       font-weight: 600;
-      padding: 2px 6px 3px;
+      padding: 3px 6px 4px;
       border-radius: 3px;
-      margin-bottom: 3px;
-      line-height: 1.45;
+      margin-bottom: 4px;
+      line-height: 1.35;
       letter-spacing: 0.04em;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      white-space: normal;
+      overflow: visible;
+      text-overflow: clip;
+    }
+
+    .chip strong,
+    .chip small {
+      display: block;
+    }
+
+    .chip strong {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    .chip small {
+      margin-top: 1px;
+      font-size: 8.5px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      opacity: 0.92;
+      text-transform: none;
     }
 
     .chip.val   { background: rgba(41,182,246,0.14);  color: #29b6f6; border-left: 2px solid #29b6f6; }
@@ -335,35 +355,35 @@
         <div class="cell"><div class="dn">7/18</div></div>
         <div class="cell has-events">
           <div class="dn">7/19</div>
-          <span class="chip ow2">OW M2 · 13:00</span>
-          <span class="chip ow2">OW M1 · 20:00</span>
+          <span class="chip ow2"><strong>OW M2 · 13:00</strong><small>哈瓦娜 / 国王大道</small></span>
+          <span class="chip ow2"><strong>OW M1 · 20:00</strong><small>漓江塔 / 国王大道</small></span>
         </div>
 
         <!-- Row 4: 7/20–7/26 -->
         <div class="cell has-events">
           <div class="dn">7/20</div>
-          <span class="chip val">VAL M1 · 19:00</span>
-          <span class="chip val">VAL M5 · 20:00</span>
+          <span class="chip val"><strong>VAL M1 · 19:00</strong><small>日落之城</small></span>
+          <span class="chip val"><strong>VAL M5 · 20:00</strong><small>亚海悬城</small></span>
         </div>
         <div class="cell has-events">
           <div class="dn">7/21</div>
-          <span class="chip lol">LOL M4 · 15:00</span>
-          <span class="chip lol">LOL M1 · 18:00</span>
-          <span class="chip val">VAL M3 · 20:00</span>
-          <span class="chip lol">LOL M2 / M6 · 20:00</span>
+          <span class="chip lol"><strong>LOL M4 · 15:00</strong><small>联盟四区</small></span>
+          <span class="chip lol"><strong>LOL M1 · 18:00</strong><small>艾欧尼亚</small></span>
+          <span class="chip val"><strong>VAL M3 · 20:00</strong><small>亚海悬城</small></span>
+          <span class="chip lol"><strong>LOL M2 / M6 · 20:00</strong><small>艾欧尼亚</small></span>
         </div>
         <div class="cell has-events">
           <div class="dn">7/22</div>
-          <span class="chip lol">LOL M5 · 14:00</span>
-          <span class="chip val">VAL M2 · 18:00</span>
+          <span class="chip lol"><strong>LOL M5 · 14:00</strong><small>台服</small></span>
+          <span class="chip val"><strong>VAL M2 · 18:00</strong><small>亚海悬城</small></span>
         </div>
 
         <!-- 7/23 Thu — confirmed matches -->
         <div class="cell has-events">
           <div class="dn">7/23</div>
-          <span class="chip val">VAL M4 · 9:30</span>
-          <span class="chip ow2">OW M3 · 18:30</span>
-          <span class="chip lol">LOL M3 · 18:30</span>
+          <span class="chip val"><strong>VAL M4 · 9:30</strong><small>亚海悬城</small></span>
+          <span class="chip ow2"><strong>OW M3 · 18:30</strong><small>地图待定</small></span>
+          <span class="chip lol"><strong>LOL M3 · 18:30</strong><small>艾欧尼亚</small></span>
         </div>
 
         <!-- 7/24 Fri — ROUND 2 START -->
