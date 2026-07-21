@@ -1537,75 +1537,80 @@
     }
 
     .bracket {
-      position: relative; width: 100%; min-width: 1600px; height: 660px;
+      position: relative; width: 100%; min-width: 1700px; height: 860px;
       overflow: hidden; isolation: isolate;
       background:
-        linear-gradient(90deg, rgba(255,255,255,0.022) 1px, transparent 1px) 0 0 / 110px 100%,
-        radial-gradient(circle at 64% 48%, rgba(255, 100, 20, 0.13), transparent 24rem),
-        radial-gradient(circle at 8%  55%, rgba(66, 180, 255, 0.08),  transparent 20rem),
-        radial-gradient(circle at 92% 16%, rgba(255, 100, 20, 0.10), transparent 18rem),
-        linear-gradient(148deg, rgba(140, 50, 0, 0.10), transparent 30%),
+        linear-gradient(90deg, rgba(255,255,255,0.022) 1px, transparent 1px) 0 0 / 132px 100%,
+        linear-gradient(180deg, rgba(255,255,255,0.015) 1px, transparent 1px) 0 0 / 100% 124px,
+        radial-gradient(circle at 60% 44%, rgba(255, 130, 30, 0.12), transparent 24rem),
+        radial-gradient(circle at 12% 66%, rgba(66, 180, 255, 0.09), transparent 20rem),
+        radial-gradient(circle at 90% 18%, rgba(255, 130, 30, 0.10), transparent 18rem),
+        linear-gradient(150deg, rgba(140, 50, 0, 0.08), transparent 32%),
         #07080e;
     }
 
     .bracket::before {
-      position: absolute; z-index: -1; top: 200px; left: 240px;
-      color: rgba(255,120,30,0.030); content: &quot;OW&quot;;
-      font-family: var(--display); font-size: 260px; font-weight: 1000;
-      font-style: italic; letter-spacing: -0.07em; transform: skew(-5deg);
+      position: absolute; z-index: -1; top: 256px; left: 560px;
+      color: rgba(255,120,30,0.024); content: &quot;OVERWATCH&quot;;
+      font-family: var(--display); font-size: 220px; font-weight: 1000;
+      font-style: italic; letter-spacing: -0.08em; transform: skew(-6deg);
       filter: blur(3px);
     }
 
     .bracket::after {
       position: absolute; z-index: -1; inset: 0; content: &quot;&quot;;
-      opacity: 0.20;
+      opacity: 0.16;
       background-image:
         repeating-radial-gradient(circle at 10% 16%, var(--orange) 0 1px, transparent 1px 18px),
         linear-gradient(22deg, transparent 55%, rgba(255,100,20,0.16) 55.2% 55.4%, transparent 55.7%),
         linear-gradient(202deg, transparent 68%, rgba(66,180,255,0.10) 68.2% 68.4%, transparent 68.7%);
-      background-size: 280px 220px, 660px 420px, 560px 360px;
-      mask-image: linear-gradient(90deg, #000, transparent 68%);
+      background-size: 290px 220px, 760px 460px, 620px 380px;
+      mask-image: linear-gradient(90deg, #000, transparent 80%);
     }
 
     /* ── Stage labels ── */
     .stage-label {
-      position: absolute; z-index: 3; top: 18px; width: 210px;
-      color: rgba(255,255,255,0.4);
-      font-family: var(--display); font-size: 10px; font-weight: 900;
-      letter-spacing: 0.22em; text-transform: uppercase;
+      position: absolute; z-index: 3; top: 28px; width: 224px;
+      padding-bottom: 12px;
+      color: rgba(255,255,255,0.48);
+      font-family: var(--display); font-size: 11px; font-weight: 900;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
     .stage-label::after {
-      display: block; width: 28px; height: 2px; margin-top: 9px; content: &quot;&quot;;
-      background: var(--orange); box-shadow: 0 0 10px rgba(255,130,30,0.7);
+      display: block; width: 34px; height: 2px; margin-top: 10px; content: &quot;&quot;;
+      background: var(--orange); box-shadow: 0 0 12px rgba(255,130,30,0.7);
     }
 
     .stage-label b {
-      display: block; margin-bottom: 3px; color: #fff;
-      font-size: 16px; letter-spacing: 0.08em;
+      display: block; margin-bottom: 4px; color: #fff;
+      font-size: 18px; letter-spacing: 0.06em;
     }
 
     .stage-label .date {
-      display: block; margin-top: 3px; color: var(--orange); font-size: 9px; opacity: 0.9;
+      display: block; margin-top: 4px; color: var(--orange); font-size: 10px; opacity: 0.9;
     }
 
     .stage-label .venue {
-      display: block; margin-top: 5px;
-      color: rgba(255,255,255,0.30);
-      font-size: 8px; font-weight: 700;
-      letter-spacing: 0.04em; text-transform: none; line-height: 1.35;
+      display: block; margin-top: 6px;
+      color: rgba(255,255,255,0.38);
+      font-size: 9px; font-weight: 700;
+      letter-spacing: 0.04em; text-transform: none; line-height: 1.4;
     }
 
-    .stage-label.s1 { left: 26px; }
-    .stage-label.s2 { left: 460px; }
-    .stage-label.s3 { left: 920px; }
-    .stage-label.s4 { left: 1380px; }
+    .stage-label.s1 { left: 40px; }
+    .stage-label.s2 { left: 420px; }
+    .stage-label.s3 { left: 820px; }
+    .stage-label.s4 { left: 1200px; }
 
     /* ── Group pills ── */
     .group-pill {
-      position: absolute; z-index: 3; left: 8px; padding: 2px 8px;
-      font-family: var(--display); font-size: 8px; font-weight: 900;
-      letter-spacing: 0.22em; text-transform: uppercase;
+      position: absolute; z-index: 3; left: 14px; padding: 4px 10px;
+      font-family: var(--display); font-size: 9px; font-weight: 900;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      background: rgba(9, 14, 18, 0.86);
+      backdrop-filter: blur(3px);
     }
 
     .group-pill.a { color: var(--orange); border-left: 2px solid var(--orange); }
@@ -1614,7 +1619,7 @@
     /* ── SVG connectors ── */
     .connectors {
       position: absolute; z-index: 0; inset: 0;
-      width: 1600px; height: 660px; pointer-events: none;
+      width: 1700px; height: 860px; pointer-events: none;
     }
 
     .connectors path, .connectors line {
@@ -1623,20 +1628,20 @@
     }
 
     .connectors .win-path {
-      stroke: rgba(255, 160, 60, 0.7);
-      stroke-width: 1.5;
+      stroke: rgba(255, 160, 60, 0.72);
+      stroke-width: 1.6;
     }
 
     .connectors .bye-path {
       stroke: rgba(255, 255, 255, 0.3);
-      stroke-width: 1.5;
+      stroke-width: 1.6;
       stroke-dasharray: 4 6;
     }
 
     .connectors .champion-path {
       stroke: var(--orange);
       stroke-width: 2.4;
-      filter: drop-shadow(0 0 5px rgba(255, 130, 30, 0.65));
+      filter: drop-shadow(0 0 6px rgba(255, 130, 30, 0.65));
     }
 
     .connectors .divider-line {
@@ -1647,9 +1652,9 @@
 
     /* ── Match cards ── */
     .match {
-      position: absolute; z-index: 2; width: 210px;
+      position: absolute; z-index: 2; width: 224px;
       animation: match-in 520ms cubic-bezier(0.2, 0.85, 0.28, 1) both;
-      animation-delay: calc(var(--order, 0) * 48ms);
+      animation-delay: calc(var(--order, 0) * 42ms);
     }
 
     @keyframes match-in {
@@ -1658,15 +1663,17 @@
     }
 
     .match-head {
-      display: flex; align-items: end; justify-content: space-between;
-      height: 44px; padding: 0 6px 8px;
+      display: grid; align-content: center; gap: 4px;
+      height: 42px; padding: 7px 10px 8px;
       color: #fff; font-family: var(--display);
-      font-size: 16px; font-weight: 1000; letter-spacing: 0.05em;
+      font-size: 18px; font-weight: 1000; letter-spacing: 0.04em;
     }
 
+    .match-head > span { display: block; line-height: 1; }
+
     .match-head small {
-      color: rgba(255,255,255,0.36); font-size: 9px; font-weight: 800;
-      letter-spacing: 0.16em; text-transform: uppercase;
+      color: rgba(255,255,255,0.72); font-size: 10px; font-weight: 800;
+      letter-spacing: 0.08em; text-transform: uppercase; line-height: 1.05;
     }
 
     .match-body {
@@ -1676,7 +1683,7 @@
       background:
         linear-gradient(100deg, rgba(140, 55, 0, 0.9), rgba(60, 22, 0, 0.78) 62%, rgba(12, 10, 10, 0.92)),
         #1e0700;
-      box-shadow: var(--shadow-orange), inset 0 0 18px rgba(255,255,255,0.02);
+      box-shadow: var(--shadow-orange), inset 0 0 20px rgba(255,255,255,0.025);
       clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 11px 100%, 0 calc(100% - 11px));
     }
 
@@ -1687,18 +1694,18 @@
     }
 
     .competitor {
-      display: grid; grid-template-columns: 30px minmax(0, 1fr) auto;
+      display: grid; grid-template-columns: 32px minmax(0, 1fr) auto;
       column-gap: 8px;
       align-items: center; min-height: 36px;
-      padding: 4px 10px 4px 7px;
+      padding: 4px 12px 4px 8px;
       border-bottom: 1px solid rgba(255,255,255,0.1);
     }
 
     .competitor:last-child { border-bottom: 0; }
 
     .seed {
-      color: rgba(255, 200, 100, 0.55); font-family: var(--display);
-      font-size: 7px; font-weight: 900; letter-spacing: 0.04em;
+      color: rgba(255, 255, 255, 0.48); font-family: var(--display);
+      font-size: 9px; font-weight: 900; letter-spacing: 0.05em;
     }
 
     .team-copy { min-width: 0; }
@@ -1707,12 +1714,12 @@
       display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
     }
 
-    .team-name { color: #fff; font-size: 12px; font-weight: 800; line-height: 1.15; }
+    .team-name { color: #fff; font-size: 13px; font-weight: 800; line-height: 1.1; }
 
     .team-tag {
-      margin-top: 2px; color: rgba(255,255,255,0.44);
-      font-family: var(--display); font-size: 8px; font-weight: 700;
-      letter-spacing: 0.07em; text-transform: uppercase;
+      margin-top: 2px; color: rgba(255,255,255,0.48);
+      font-family: var(--display); font-size: 8.5px; font-weight: 700;
+      letter-spacing: 0.05em; text-transform: uppercase;
     }
 
     .competitor.winner {
@@ -1748,32 +1755,32 @@
 
     /* ── Bye block ── */
     .bye-block {
-      position: absolute; z-index: 2; width: 210px;
+      position: absolute; z-index: 2; width: 224px;
       animation: match-in 520ms cubic-bezier(0.2, 0.85, 0.28, 1) both;
-      animation-delay: calc(var(--order, 0) * 48ms);
+      animation-delay: calc(var(--order, 0) * 42ms);
     }
 
     .bye-block-inner {
       display: flex; align-items: center; justify-content: space-between;
-      min-height: 65px; padding: 10px 11px;
+      min-height: 72px; padding: 11px 13px;
       border: 1px dashed rgba(255,255,255,0.16);
       background: rgba(255,255,255,0.014);
       clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
     }
 
     .bye-label {
-      font-family: var(--display); font-size: 9px; font-weight: 900;
-      letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted);
+      font-family: var(--display); font-size: 10px; font-weight: 900;
+      letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);
     }
 
     .bye-team {
-      display: block; font-size: 13px; font-weight: 800; color: #fff; margin-top: 3px;
+      display: block; font-size: 14px; font-weight: 800; color: #fff; margin-top: 4px;
     }
 
     .bye-tag {
-      display: block; font-family: var(--display); font-size: 8px; font-weight: 700;
-      color: rgba(255,255,255,0.36); letter-spacing: 0.1em;
-      text-transform: uppercase; margin-top: 2px;
+      display: block; font-family: var(--display); font-size: 8.5px; font-weight: 700;
+      color: rgba(255,255,255,0.4); letter-spacing: 0.08em;
+      text-transform: uppercase; margin-top: 3px;
     }
 
     .bye-badge {
@@ -1791,15 +1798,15 @@
 
     /* ── Champion ── */
     .champion {
-      position: absolute; z-index: 2; width: 190px;
+      position: absolute; z-index: 2; width: 184px;
       display: flex; flex-direction: column; align-items: center;
-      padding: 18px 14px 20px;
+      padding: 20px 16px 22px;
       border: 1px solid rgba(255, 150, 55, 0.6);
       background:
         radial-gradient(ellipse at 50% 28%, rgba(255, 120, 30, 0.22) 0%, transparent 60%),
         linear-gradient(160deg, rgba(160, 55, 0, 0.58) 0%, #060610 72%);
       box-shadow:
-        0 0 55px rgba(255, 120, 30, 0.4),
+        0 0 55px rgba(255, 120, 30, 0.38),
         0 0 110px rgba(255, 120, 30, 0.14),
         inset 0 1px 0 rgba(255, 190, 80, 0.24),
         inset 0 0 36px rgba(255, 120, 30, 0.07);
@@ -1860,12 +1867,12 @@
     /* ── Info section ── */
     .information-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.22fr) minmax(360px, 0.78fr);
+      grid-template-columns: minmax(0, 1.24fr) minmax(360px, 0.76fr);
       gap: 14px; margin-top: 14px;
     }
 
     .info-card {
-      position: relative; min-height: 220px; padding: 24px; overflow: hidden;
+      position: relative; min-height: 230px; padding: 24px; overflow: hidden;
       border: 1px solid var(--line-soft);
       background: linear-gradient(145deg, rgba(255,255,255,0.044), rgba(9,10,16,0.88));
     }
@@ -1894,14 +1901,14 @@
 
     .team-pool {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
-      gap: 8px;
+      grid-template-columns: repeat(auto-fill, minmax(176px, 1fr));
+      gap: 10px;
     }
 
     .team-chip {
       position: relative; display: grid;
       grid-template-columns: 22px minmax(0,1fr) auto;
-      align-items: center; gap: 7px; min-height: 48px; padding: 6px 9px;
+      align-items: center; gap: 8px; min-height: 50px; padding: 7px 10px;
       border: 1px solid rgba(255,255,255,0.1);
       background: rgba(255,255,255,0.018);
     }
@@ -2008,8 +2015,8 @@
       .control-strip { grid-template-columns: 1fr 2fr; }
       .bracket-frame { border: 0; }
       .bracket-viewport { overflow: visible; }
-      .bracket { transform: scale(0.64); transform-origin: top left; }
-      .bracket-frame, .bracket-viewport { height: 430px; }
+      .bracket { transform: scale(0.6); transform-origin: top left; }
+      .bracket-frame, .bracket-viewport { height: 560px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -2076,51 +2083,58 @@
           &lt;/div&gt;
 
           &lt;!-- Group labels --&gt;
-          &lt;div class=&quot;group-pill a&quot; style=&quot;top:85px;&quot;&gt;A 组&lt;/div&gt;
-          &lt;div class=&quot;group-pill b&quot; style=&quot;top:395px;&quot;&gt;B 组&lt;/div&gt;
+          &lt;div class=&quot;group-pill a&quot; style=&quot;top:100px;&quot;&gt;A 组&lt;/div&gt;
+          &lt;div class=&quot;group-pill b&quot; style=&quot;top:500px;&quot;&gt;B 组&lt;/div&gt;
 
           &lt;!-- ── SVG Connectors ──
             Layout key:
-              R1 right edge x = 206   (26+180)
-              R2 left x = 310,  right edge x = 490
-              GF left x = 590,  right edge x = 770
-              Champion left x = 826
+             Match head = 42px; each competitor = 36px
+             right-center y = card_top + 78
+             top_comp center y = card_top + 60
+             bot_comp center y = card_top + 96
+             Bye block center = top + 36
 
-              M1 top=70  → right-center y = 137   (top+67)
-              M2 top=210 → right-center y = 277
-              M3 top=400 → right-center y = 467
-              Bye top=510 → center y = 542         (top+32)
+             R1 left=40   right_edge=264
+             R2 left=420  right_edge=644
+             GF left=820  right_edge=1044
+             Champion left=1200
 
-              M4 top=140 → top-comp y=189, bot-comp y=225, right-center y=207
-              M5 top=430 → top-comp y=479, bot-comp y=515, right-center y=497
+             M1 top=120  rc_y=198
+             M2 top=300  rc_y=378
+             M3 top=520  rc_y=598
+             Bye top=700 center=736
 
-              M6 top=278 → top-comp y=327, bot-comp y=363, right-center y=345
+             M4 top=240  tc_y=300  bc_y=336  rc_y=318
+             M5 top=570  tc_y=630  bc_y=666  rc_y=648
+
+             M6 top=410  tc_y=470  bc_y=506  rc_y=488
+             Champion center_y=488 → left=1200 top=381
           --&gt;
-          &lt;svg class=&quot;connectors&quot; viewBox=&quot;0 0 1600 660&quot; aria-hidden=&quot;true&quot;&gt;
+          &lt;svg class=&quot;connectors&quot; viewBox=&quot;0 0 1700 860&quot; aria-hidden=&quot;true&quot;&gt;
 
-            &lt;!-- Group A: M1 winner → M4 top slot, M2 winner → M4 bot slot --&gt;
-            &lt;path class=&quot;win-path&quot; d=&quot;M236 137 H348 V189 H460&quot; /&gt;
-            &lt;path class=&quot;win-path&quot; d=&quot;M236 277 H348 V225 H460&quot; /&gt;
+           &lt;!-- Group A: M1 winner → M4 top slot, M2 winner → M4 bot slot --&gt;
+           &lt;path class=&quot;win-path&quot; d=&quot;M264 198 H342 V300 H420&quot; /&gt;
+           &lt;path class=&quot;win-path&quot; d=&quot;M264 378 H342 V336 H420&quot; /&gt;
 
-            &lt;!-- Group B: M3 winner → M5 top slot --&gt;
-            &lt;path class=&quot;win-path&quot; d=&quot;M236 467 H348 V479 H460&quot; /&gt;
-            &lt;!-- Omnic Dawn bye → M5 bot slot --&gt;
-            &lt;path class=&quot;bye-path&quot;  d=&quot;M236 542 H348 V515 H460&quot; /&gt;
+           &lt;!-- Group B: M3 winner → M5 top slot --&gt;
+           &lt;path class=&quot;win-path&quot; d=&quot;M264 598 H342 V630 H420&quot; /&gt;
+           &lt;!-- Omnic Dawn bye → M5 bot slot --&gt;
+           &lt;path class=&quot;bye-path&quot;  d=&quot;M264 736 H342 V666 H420&quot; /&gt;
 
-            &lt;!-- Group divider --&gt;
-            &lt;line class=&quot;divider-line&quot; x1=&quot;0&quot; y1=&quot;368&quot; x2=&quot;455&quot; y2=&quot;368&quot; /&gt;
+           &lt;!-- Group divider --&gt;
+           &lt;line class=&quot;divider-line&quot; x1=&quot;0&quot; y1=&quot;470&quot; x2=&quot;410&quot; y2=&quot;470&quot; /&gt;
 
-            &lt;!-- R2 → GF (champion paths) --&gt;
-            &lt;path class=&quot;champion-path&quot; d=&quot;M670 207 H795 V327 H920&quot; /&gt;
-            &lt;path class=&quot;champion-path&quot; d=&quot;M670 497 H795 V363 H920&quot; /&gt;
+           &lt;!-- R2 → GF (champion paths) --&gt;
+           &lt;path class=&quot;champion-path&quot; d=&quot;M644 318 H732 V470 H820&quot; /&gt;
+           &lt;path class=&quot;champion-path&quot; d=&quot;M644 648 H732 V506 H820&quot; /&gt;
 
-            &lt;!-- GF → Champion --&gt;
-            &lt;path class=&quot;champion-path&quot; d=&quot;M1130 345 H1380&quot; /&gt;
+           &lt;!-- GF → Champion --&gt;
+           &lt;path class=&quot;champion-path&quot; d=&quot;M1044 488 H1200&quot; /&gt;
 
           &lt;/svg&gt;
 
           &lt;!-- ── ROUND 1 · GROUP A ── --&gt;
-          &lt;article class=&quot;match&quot; style=&quot;left:26px; top:70px; --order:1&quot; aria-label=&quot;M1&quot;&gt;
+          &lt;article class=&quot;match&quot; style=&quot;left:40px; top:120px; --order:1&quot; aria-label=&quot;M1&quot;&gt;
             &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M1&lt;/span&gt;&lt;small&gt;A 组 · 漓江塔 / 国王大道 · 扬名立万 2:0 · BO3&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor winner&quot;&gt;
@@ -2142,7 +2156,7 @@
             &lt;/div&gt;
           &lt;/article&gt;
 
-          &lt;article class=&quot;match&quot; style=&quot;left:26px; top:210px; --order:2&quot; aria-label=&quot;M2&quot;&gt;
+          &lt;article class=&quot;match&quot; style=&quot;left:40px; top:300px; --order:2&quot; aria-label=&quot;M2&quot;&gt;
             &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M2&lt;/span&gt;&lt;small&gt;A 组 · 哈瓦娜 / 国王大道 · AMD 2:0 · BO3&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor&quot;&gt;
@@ -2165,7 +2179,7 @@
           &lt;/article&gt;
 
           &lt;!-- ── ROUND 1 · GROUP B ── --&gt;
-          &lt;article class=&quot;match&quot; style=&quot;left:26px; top:400px; --order:3&quot; aria-label=&quot;M3&quot;&gt;
+          &lt;article class=&quot;match&quot; style=&quot;left:40px; top:520px; --order:3&quot; aria-label=&quot;M3&quot;&gt;
             &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M3&lt;/span&gt;&lt;small&gt;B 组 · Opening · BO3&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor&quot;&gt;
@@ -2186,7 +2200,7 @@
           &lt;/article&gt;
 
           &lt;!-- Omnic Dawn: direct bye --&gt;
-          &lt;div class=&quot;bye-block direct&quot; style=&quot;left:26px; top:510px; --order:4&quot; aria-label=&quot;Omnic Dawn 直通&quot;&gt;
+          &lt;div class=&quot;bye-block direct&quot; style=&quot;left:40px; top:700px; --order:4&quot; aria-label=&quot;Omnic Dawn 直通&quot;&gt;
             &lt;div class=&quot;bye-block-inner&quot;&gt;
               &lt;div&gt;
                 &lt;span class=&quot;bye-label&quot;&gt;B 组 · 直通&lt;/span&gt;
@@ -2198,7 +2212,7 @@
           &lt;/div&gt;
 
           &lt;!-- ── ROUND 2 ── --&gt;
-          &lt;article class=&quot;match flow&quot; style=&quot;left:460px; top:140px; --order:5&quot; aria-label=&quot;M4&quot;&gt;
+          &lt;article class=&quot;match flow&quot; style=&quot;left:420px; top:240px; --order:5&quot; aria-label=&quot;M4&quot;&gt;
             &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M4&lt;/span&gt;&lt;small&gt;A 组 · Round 2 · BO3&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor&quot;&gt;
@@ -2218,7 +2232,7 @@
             &lt;/div&gt;
           &lt;/article&gt;
 
-          &lt;article class=&quot;match flow&quot; style=&quot;left:460px; top:430px; --order:6&quot; aria-label=&quot;M5&quot;&gt;
+          &lt;article class=&quot;match flow&quot; style=&quot;left:420px; top:570px; --order:6&quot; aria-label=&quot;M5&quot;&gt;
             &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M5&lt;/span&gt;&lt;small&gt;B 组 · Round 2 · BO3&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor&quot;&gt;
@@ -2239,7 +2253,7 @@
           &lt;/article&gt;
 
           &lt;!-- ── GRAND FINAL ── --&gt;
-          &lt;article class=&quot;match final&quot; style=&quot;left:920px; top:278px; --order:7&quot; aria-label=&quot;M6 总决赛&quot;&gt;
+          &lt;article class=&quot;match final&quot; style=&quot;left:820px; top:410px; --order:7&quot; aria-label=&quot;M6 总决赛&quot;&gt;
             &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M6&lt;/span&gt;&lt;small&gt;Grand Final · 8月19日 · BO5&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor&quot;&gt;
@@ -2260,7 +2274,7 @@
           &lt;/article&gt;
 
           &lt;!-- ── CHAMPION ── --&gt;
-          &lt;div class=&quot;champion&quot; style=&quot;left:1380px; top:258px;&quot; aria-label=&quot;最终冠军&quot;&gt;
+          &lt;div class=&quot;champion&quot; style=&quot;left:1200px; top:381px;&quot; aria-label=&quot;最终冠军&quot;&gt;
             &lt;svg class=&quot;champion-trophy&quot; viewBox=&quot;0 0 54 62&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; aria-hidden=&quot;true&quot;&gt;
               &lt;!-- Cup body --&gt;
               &lt;path d=&quot;M12 7 H42 V29 Q42 43 27 45 Q12 43 12 29 Z&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.8&quot; fill=&quot;rgba(255,130,40,0.13)&quot;/&gt;
