@@ -56,30 +56,35 @@
     }
 
     body::after {
-      content: 'OMEN\A CUP';
-      position: fixed;
-      top: 180px;
-      left: 50%;
-      z-index: -1;
-      color: rgba(255,255,255,0.028);
-      font-size: 154px;
-      font-weight: 700;
-      letter-spacing: 0.09em;
-      line-height: 0.78;
-      white-space: pre;
-      text-align: center;
-      text-transform: uppercase;
-      transform: translateX(-18%) rotate(-14deg);
-      text-shadow:
-        0 0 24px rgba(255,70,85,0.07),
-        0 0 56px rgba(41,182,246,0.04);
+      content: none;
     }
 
     /* ── PAGE TITLE ── */
     .page-header {
       position: relative;
+      isolation: isolate;
       text-align: center;
       margin-bottom: 10px;
+    }
+
+    .page-header::after {
+      content: 'OMEN CUP';
+      position: absolute;
+      left: 50%;
+      top: -10px;
+      z-index: -1;
+      color: rgba(255,255,255,0.03);
+      font-size: 128px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      line-height: 1;
+      white-space: nowrap;
+      text-transform: uppercase;
+      transform: translateX(-50%) skew(-14deg);
+      text-shadow:
+        0 0 24px rgba(255,70,85,0.07),
+        0 0 56px rgba(41,182,246,0.04);
+      pointer-events: none;
     }
 
     .page-header h1 {
