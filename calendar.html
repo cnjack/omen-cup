@@ -63,39 +63,90 @@
     .page-header {
       position: relative;
       isolation: isolate;
+      max-width: 1080px;
+      margin: 0 auto 18px;
+      padding: 24px 24px 20px;
       text-align: center;
-      margin-bottom: 10px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background:
+        linear-gradient(90deg, rgba(255,70,85,0.08), transparent 18%, transparent 82%, rgba(41,182,246,0.08)),
+        linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01)),
+        rgba(8,12,18,0.82);
+      box-shadow:
+        inset 0 0 36px rgba(255,255,255,0.02),
+        0 18px 54px rgba(0,0,0,0.34);
+      overflow: hidden;
+    }
+
+    .page-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background:
+        linear-gradient(90deg, transparent 0 7%, rgba(255,70,85,0.34) 7.2% 15%, transparent 15.4% 84.6%, rgba(41,182,246,0.34) 85% 92.8%, transparent 93.2%),
+        linear-gradient(180deg, rgba(255,255,255,0.05), transparent 24%);
+      mask-image: linear-gradient(180deg, #000, rgba(0,0,0,0.84));
     }
 
     .page-header::after {
       content: 'OMEN CUP';
       position: absolute;
       left: 50%;
-      top: -10px;
+      top: 38px;
       z-index: -1;
-      color: rgba(255,255,255,0.03);
-      font-size: 128px;
+      color: rgba(255,255,255,0.028);
+      font-size: 126px;
       font-weight: 700;
-      letter-spacing: 0.18em;
+      letter-spacing: 0.15em;
       line-height: 1;
       white-space: nowrap;
       text-transform: uppercase;
-      transform: translateX(-50%) skew(-14deg);
+      transform: translateX(-50%) skew(-16deg);
       text-shadow:
         0 0 24px rgba(255,70,85,0.07),
         0 0 56px rgba(41,182,246,0.04);
       pointer-events: none;
     }
 
+    .season-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 156px;
+      margin-bottom: 10px;
+      padding: 5px 18px 4px;
+      color: #f5ddbf;
+      border: 1px solid rgba(255,177,100,0.42);
+      background:
+        linear-gradient(180deg, rgba(255,208,140,0.16), rgba(255,120,30,0.03)),
+        rgba(16,12,10,0.78);
+      box-shadow: 0 0 18px rgba(255,120,30,0.12), inset 0 0 18px rgba(255,255,255,0.03);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      clip-path: polygon(12px 0, calc(100% - 12px) 0, 100% 50%, calc(100% - 12px) 100%, 12px 100%, 0 50%);
+    }
+
     .page-header h1 {
       display: inline-flex;
       align-items: center;
       gap: 18px;
+      padding: 10px 26px 12px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.01)),
+        linear-gradient(90deg, rgba(255,70,85,0.08), rgba(20,18,22,0.65) 28%, rgba(20,18,22,0.65) 72%, rgba(41,182,246,0.08));
+      box-shadow:
+        inset 0 0 26px rgba(255,255,255,0.03),
+        0 0 28px rgba(255,70,85,0.08);
       font-size: 44px;
       font-weight: 700;
       letter-spacing: 0.08em;
       line-height: 1;
       text-shadow: 0 0 22px rgba(255,70,85,0.16);
+      clip-path: polygon(18px 0, calc(100% - 18px) 0, 100% 50%, calc(100% - 18px) 100%, 18px 100%, 0 50%);
     }
 
     .chevron {
@@ -104,12 +155,59 @@
       font-weight: 700;
     }
 
-    .page-sub {
-      margin-top: 10px;
-      font-size: 11px;
-      letter-spacing: 0.22em;
-      color: var(--muted);
+    .page-kicker {
+      margin-top: 12px;
+      font-size: 10px;
+      letter-spacing: 0.28em;
+      color: rgba(255,255,255,0.56);
       text-transform: uppercase;
+    }
+
+    .energy-core {
+      position: relative;
+      width: 156px;
+      height: 52px;
+      margin: 14px auto 10px;
+      filter: drop-shadow(0 0 18px rgba(255,70,85,0.24));
+    }
+
+    .energy-core::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: 2px solid rgba(255,70,85,0.82);
+      border-radius: 50% / 62%;
+      box-shadow:
+        0 0 18px rgba(255,70,85,0.28),
+        inset 0 0 18px rgba(255,70,85,0.18);
+      background:
+        radial-gradient(circle at 50% 50%, rgba(255,70,85,0.32), transparent 44%),
+        radial-gradient(circle at 50% 50%, rgba(255,255,255,0.22), transparent 12%);
+    }
+
+    .energy-core::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 220px;
+      height: 2px;
+      background:
+        linear-gradient(90deg, transparent, rgba(255,70,85,0.72) 18%, rgba(255,70,85,0.98) 50%, rgba(41,182,246,0.72) 82%, transparent);
+      transform: translate(-50%, -50%);
+      box-shadow: 0 0 18px rgba(255,70,85,0.28);
+    }
+
+    .page-sub {
+      display: inline-block;
+      margin-top: 4px;
+      padding: 5px 18px 6px;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      color: #ff8f7f;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, rgba(255,70,85,0.12), rgba(255,70,85,0.02) 50%, rgba(41,182,246,0.08));
+      border-top: 1px solid rgba(255,70,85,0.22);
     }
 
     /* ── LEGEND ── */
@@ -117,11 +215,14 @@
       display: flex;
       justify-content: center;
       gap: 30px;
-      margin: 28px 0 44px;
+      max-width: 1080px;
+      margin: 22px auto 44px;
       flex-wrap: wrap;
       padding: 14px 18px;
       border: 1px solid rgba(255,255,255,0.06);
-      background: linear-gradient(145deg, rgba(255,255,255,0.028), rgba(11,16,24,0.74));
+      background:
+        linear-gradient(90deg, rgba(255,70,85,0.05), transparent 18%, transparent 82%, rgba(41,182,246,0.05)),
+        linear-gradient(145deg, rgba(255,255,255,0.028), rgba(11,16,24,0.74));
       box-shadow: inset 0 0 28px rgba(255,255,255,0.02);
     }
 
@@ -410,7 +511,10 @@
 
   <!-- ── HEADER ── -->
   <div class="page-header">
+    <div class="season-badge">2026 SEASON</div>
     <h1><span class="chevron">›</span>赛程日历<span class="chevron">‹</span></h1>
+    <p class="page-kicker">OMEN CUP · HP China E-Sports Master League</p>
+    <div class="energy-core" aria-hidden="true"></div>
     <p class="page-sub">OMEN CUP 2026 · Tournament Schedule Calendar</p>
   </div>
 
