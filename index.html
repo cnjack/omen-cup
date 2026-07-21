@@ -1676,6 +1676,17 @@
       letter-spacing: 0.08em; text-transform: uppercase; line-height: 1.05;
     }
 
+    .match.two-line-head .match-head {
+      height: 58px;
+      padding: 8px 10px 10px;
+      gap: 3px;
+    }
+
+    .match.two-line-head .match-head small {
+      display: block;
+      line-height: 1.18;
+    }
+
     .match-body {
       position: relative; overflow: hidden;
       border: 1px solid rgba(255,255,255,0.22);
@@ -2088,10 +2099,13 @@
 
           &lt;!-- ── SVG Connectors ──
             Layout key:
-             Match head = 42px; each competitor = 36px
-             right-center y = card_top + 78
-             top_comp center y = card_top + 60
-             bot_comp center y = card_top + 96
+             Match head = 42px; M1/M2 head = 58px; each competitor = 36px
+             M1/M2 right-center y = card_top + 94
+             M1/M2 top_comp center y = card_top + 76
+             M1/M2 bot_comp center y = card_top + 112
+             Regular right-center y = card_top + 78
+             Regular top_comp center y = card_top + 60
+             Regular bot_comp center y = card_top + 96
              Bye block center = top + 36
 
              R1 left=40   right_edge=264
@@ -2099,8 +2113,8 @@
              GF left=820  right_edge=1044
              Champion left=1200
 
-             M1 top=120  rc_y=198
-             M2 top=300  rc_y=378
+             M1 top=120  rc_y=214
+             M2 top=300  rc_y=394
              M3 top=520  rc_y=598
              Bye top=700 center=736
 
@@ -2113,8 +2127,8 @@
           &lt;svg class=&quot;connectors&quot; viewBox=&quot;0 0 1700 860&quot; aria-hidden=&quot;true&quot;&gt;
 
            &lt;!-- Group A: M1 winner → M4 top slot, M2 winner → M4 bot slot --&gt;
-           &lt;path class=&quot;win-path&quot; d=&quot;M264 198 H342 V300 H420&quot; /&gt;
-           &lt;path class=&quot;win-path&quot; d=&quot;M264 378 H342 V336 H420&quot; /&gt;
+           &lt;path class=&quot;win-path&quot; d=&quot;M264 214 H342 V300 H420&quot; /&gt;
+           &lt;path class=&quot;win-path&quot; d=&quot;M264 394 H342 V336 H420&quot; /&gt;
 
            &lt;!-- Group B: M3 winner → M5 top slot --&gt;
            &lt;path class=&quot;win-path&quot; d=&quot;M264 598 H342 V630 H420&quot; /&gt;
@@ -2134,8 +2148,8 @@
           &lt;/svg&gt;
 
           &lt;!-- ── ROUND 1 · GROUP A ── --&gt;
-          &lt;article class=&quot;match&quot; style=&quot;left:40px; top:120px; --order:1&quot; aria-label=&quot;M1&quot;&gt;
-            &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M1&lt;/span&gt;&lt;small&gt;A 组 · 7月19日 20:00 · 漓江塔 / 国王大道 · BO3&lt;/small&gt;&lt;/div&gt;
+          &lt;article class=&quot;match two-line-head&quot; style=&quot;left:40px; top:120px; --order:1&quot; aria-label=&quot;M1&quot;&gt;
+            &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M1&lt;/span&gt;&lt;small&gt;A 组 · 7月19日 20:00&lt;br&gt;漓江塔 / 国王大道 · BO3&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor winner&quot;&gt;
                 &lt;span class=&quot;seed&quot;&gt;DL&lt;/span&gt;
@@ -2156,8 +2170,8 @@
             &lt;/div&gt;
           &lt;/article&gt;
 
-          &lt;article class=&quot;match&quot; style=&quot;left:40px; top:300px; --order:2&quot; aria-label=&quot;M2&quot;&gt;
-            &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M2&lt;/span&gt;&lt;small&gt;A 组 · 7月19日 13:00 · 哈瓦娜 / 国王大道 · BO3&lt;/small&gt;&lt;/div&gt;
+          &lt;article class=&quot;match two-line-head&quot; style=&quot;left:40px; top:300px; --order:2&quot; aria-label=&quot;M2&quot;&gt;
+            &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M2&lt;/span&gt;&lt;small&gt;A 组 · 7月19日 13:00&lt;br&gt;哈瓦娜 / 国王大道 · BO3&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor&quot;&gt;
                 &lt;span class=&quot;seed&quot;&gt;ODM&lt;/span&gt;
