@@ -1687,7 +1687,8 @@
     }
 
     .competitor {
-      display: grid; grid-template-columns: 30px minmax(0, 1fr);
+      display: grid; grid-template-columns: 30px minmax(0, 1fr) auto;
+      column-gap: 8px;
       align-items: center; min-height: 36px;
       padding: 4px 10px 4px 7px;
       border-bottom: 1px solid rgba(255,255,255,0.1);
@@ -1712,6 +1713,26 @@
       margin-top: 2px; color: rgba(255,255,255,0.44);
       font-family: var(--display); font-size: 8px; font-weight: 700;
       letter-spacing: 0.07em; text-transform: uppercase;
+    }
+
+    .competitor.winner {
+      background: linear-gradient(90deg, rgba(255, 170, 90, 0.16), rgba(255, 170, 90, 0.04) 72%, transparent);
+    }
+
+    .score {
+      justify-self: end;
+      min-width: 18px;
+      color: rgba(255,255,255,0.56);
+      font-family: var(--display);
+      font-size: 16px;
+      font-weight: 900;
+      line-height: 1;
+      text-align: right;
+    }
+
+    .competitor.winner .score {
+      color: #ffb26f;
+      text-shadow: 0 0 12px rgba(255, 178, 111, 0.34);
     }
 
     .match.flow .match-body {
@@ -2100,27 +2121,52 @@
 
           &lt;!-- ── ROUND 1 · GROUP A ── --&gt;
           &lt;article class=&quot;match&quot; style=&quot;left:26px; top:70px; --order:1&quot; aria-label=&quot;M1&quot;&gt;
-            &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M1&lt;/span&gt;&lt;small&gt;A 组 · Opening · BO3&lt;/small&gt;&lt;/div&gt;
+            &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M1&lt;/span&gt;&lt;small&gt;A 组 · 漓江塔 / 国王大道 · 扬名立万 2:0 · BO3&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
-              &lt;div class=&quot;competitor&quot;&gt;
+              &lt;div class=&quot;competitor winner&quot;&gt;
                 &lt;span class=&quot;seed&quot;&gt;DL&lt;/span&gt;
                 &lt;span class=&quot;team-copy&quot;&gt;
                   &lt;strong class=&quot;team-name&quot;&gt;扬名立万&lt;/strong&gt;
-                  &lt;small class=&quot;team-tag&quot;&gt;HP · DL&lt;/small&gt;
+                  &lt;small class=&quot;team-tag&quot;&gt;HP · DL · 晋级&lt;/small&gt;
                 &lt;/span&gt;
+                &lt;span class=&quot;score&quot;&gt;2&lt;/span&gt;
               &lt;/div&gt;
               &lt;div class=&quot;competitor&quot;&gt;
                 &lt;span class=&quot;seed&quot;&gt;三方&lt;/span&gt;
                 &lt;span class=&quot;team-copy&quot;&gt;
                   &lt;strong class=&quot;team-name&quot;&gt;跨公司混编&lt;/strong&gt;
-                  &lt;small class=&quot;team-tag&quot;&gt;HP + Intel + ODM&lt;/small&gt;
+                  &lt;small class=&quot;team-tag&quot;&gt;HP + Intel + ODM · 两局红方&lt;/small&gt;
                 &lt;/span&gt;
+                &lt;span class=&quot;score&quot;&gt;0&lt;/span&gt;
               &lt;/div&gt;
             &lt;/div&gt;
           &lt;/article&gt;
 
           &lt;article class=&quot;match&quot; style=&quot;left:26px; top:210px; --order:2&quot; aria-label=&quot;M2&quot;&gt;
-            &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M2&lt;/span&gt;&lt;small&gt;A 组 · Opening · BO3&lt;/small&gt;&lt;/div&gt;
+            &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M2&lt;/span&gt;&lt;small&gt;A 组 · 哈瓦娜 / 国王大道 · AMD 2:0 · BO3&lt;/small&gt;&lt;/div&gt;
+            &lt;div class=&quot;match-body&quot;&gt;
+              &lt;div class=&quot;competitor&quot;&gt;
+                &lt;span class=&quot;seed&quot;&gt;ODM&lt;/span&gt;
+                &lt;span class=&quot;team-copy&quot;&gt;
+                  &lt;strong class=&quot;team-name&quot;&gt;ODM 混编&lt;/strong&gt;
+                  &lt;small class=&quot;team-tag&quot;&gt;ODM · 混编 · 第二局红方&lt;/small&gt;
+                &lt;/span&gt;
+                &lt;span class=&quot;score&quot;&gt;0&lt;/span&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;competitor winner&quot;&gt;
+                &lt;span class=&quot;seed&quot;&gt;AMD&lt;/span&gt;
+                &lt;span class=&quot;team-copy&quot;&gt;
+                  &lt;strong class=&quot;team-name&quot;&gt;AMD&lt;/strong&gt;
+                  &lt;small class=&quot;team-tag&quot;&gt;AMD · AMD · 第一局红方 · 晋级&lt;/small&gt;
+                &lt;/span&gt;
+                &lt;span class=&quot;score&quot;&gt;2&lt;/span&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/article&gt;
+
+          &lt;!-- ── ROUND 1 · GROUP B ── --&gt;
+          &lt;article class=&quot;match&quot; style=&quot;left:26px; top:400px; --order:3&quot; aria-label=&quot;M3&quot;&gt;
+            &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M3&lt;/span&gt;&lt;small&gt;B 组 · Opening · BO3&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor&quot;&gt;
                 &lt;span class=&quot;seed&quot;&gt;SH&lt;/span&gt;
@@ -2134,27 +2180,6 @@
                 &lt;span class=&quot;team-copy&quot;&gt;
                   &lt;strong class=&quot;team-name&quot;&gt;里長 bro&lt;/strong&gt;
                   &lt;small class=&quot;team-tag&quot;&gt;HP · TP&lt;/small&gt;
-                &lt;/span&gt;
-              &lt;/div&gt;
-            &lt;/div&gt;
-          &lt;/article&gt;
-
-          &lt;!-- ── ROUND 1 · GROUP B ── --&gt;
-          &lt;article class=&quot;match&quot; style=&quot;left:26px; top:400px; --order:3&quot; aria-label=&quot;M3&quot;&gt;
-            &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M3&lt;/span&gt;&lt;small&gt;B 组 · Opening · BO3&lt;/small&gt;&lt;/div&gt;
-            &lt;div class=&quot;match-body&quot;&gt;
-              &lt;div class=&quot;competitor&quot;&gt;
-                &lt;span class=&quot;seed&quot;&gt;ODM&lt;/span&gt;
-                &lt;span class=&quot;team-copy&quot;&gt;
-                  &lt;strong class=&quot;team-name&quot;&gt;ODM 混编&lt;/strong&gt;
-                  &lt;small class=&quot;team-tag&quot;&gt;ODM · 混编&lt;span class=&quot;side def&quot;&gt;守&lt;/span&gt;&lt;/small&gt;
-                &lt;/span&gt;
-              &lt;/div&gt;
-              &lt;div class=&quot;competitor&quot;&gt;
-                &lt;span class=&quot;seed&quot;&gt;AMD&lt;/span&gt;
-                &lt;span class=&quot;team-copy&quot;&gt;
-                  &lt;strong class=&quot;team-name&quot;&gt;AMD&lt;/strong&gt;
-                  &lt;small class=&quot;team-tag&quot;&gt;AMD · AMD&lt;/small&gt;
                 &lt;/span&gt;
               &lt;/div&gt;
             &lt;/div&gt;
@@ -2280,10 +2305,10 @@
         &lt;div class=&quot;team-pool&quot;&gt;
           &lt;div class=&quot;team-chip grp-a&quot;&gt;&lt;span class=&quot;chip-index&quot;&gt;01&lt;/span&gt;&lt;span class=&quot;chip-copy&quot;&gt;&lt;strong&gt;扬名立万&lt;/strong&gt;&lt;span&gt;HP · DL&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;chip-state&quot;&gt;A 组&lt;/span&gt;&lt;/div&gt;
           &lt;div class=&quot;team-chip grp-a&quot;&gt;&lt;span class=&quot;chip-index&quot;&gt;02&lt;/span&gt;&lt;span class=&quot;chip-copy&quot;&gt;&lt;strong&gt;跨公司混编&lt;/strong&gt;&lt;span&gt;HP + Intel + ODM&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;chip-state&quot;&gt;A 组&lt;/span&gt;&lt;/div&gt;
-          &lt;div class=&quot;team-chip grp-a&quot;&gt;&lt;span class=&quot;chip-index&quot;&gt;03&lt;/span&gt;&lt;span class=&quot;chip-copy&quot;&gt;&lt;strong&gt;SHP&lt;/strong&gt;&lt;span&gt;HP · SH&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;chip-state&quot;&gt;A 组&lt;/span&gt;&lt;/div&gt;
-          &lt;div class=&quot;team-chip grp-a&quot;&gt;&lt;span class=&quot;chip-index&quot;&gt;04&lt;/span&gt;&lt;span class=&quot;chip-copy&quot;&gt;&lt;strong&gt;里長 bro&lt;/strong&gt;&lt;span&gt;HP · TP&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;chip-state&quot;&gt;A 组&lt;/span&gt;&lt;/div&gt;
-          &lt;div class=&quot;team-chip grp-b&quot;&gt;&lt;span class=&quot;chip-index&quot;&gt;05&lt;/span&gt;&lt;span class=&quot;chip-copy&quot;&gt;&lt;strong&gt;ODM 混编&lt;/strong&gt;&lt;span&gt;ODM · 混编&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;chip-state&quot;&gt;B 组&lt;/span&gt;&lt;/div&gt;
-          &lt;div class=&quot;team-chip grp-b&quot;&gt;&lt;span class=&quot;chip-index&quot;&gt;06&lt;/span&gt;&lt;span class=&quot;chip-copy&quot;&gt;&lt;strong&gt;AMD&lt;/strong&gt;&lt;span&gt;AMD · AMD&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;chip-state&quot;&gt;B 组&lt;/span&gt;&lt;/div&gt;
+          &lt;div class=&quot;team-chip grp-b&quot;&gt;&lt;span class=&quot;chip-index&quot;&gt;03&lt;/span&gt;&lt;span class=&quot;chip-copy&quot;&gt;&lt;strong&gt;SHP&lt;/strong&gt;&lt;span&gt;HP · SH&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;chip-state&quot;&gt;B 组&lt;/span&gt;&lt;/div&gt;
+          &lt;div class=&quot;team-chip grp-b&quot;&gt;&lt;span class=&quot;chip-index&quot;&gt;04&lt;/span&gt;&lt;span class=&quot;chip-copy&quot;&gt;&lt;strong&gt;里長 bro&lt;/strong&gt;&lt;span&gt;HP · TP&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;chip-state&quot;&gt;B 组&lt;/span&gt;&lt;/div&gt;
+          &lt;div class=&quot;team-chip grp-a&quot;&gt;&lt;span class=&quot;chip-index&quot;&gt;05&lt;/span&gt;&lt;span class=&quot;chip-copy&quot;&gt;&lt;strong&gt;ODM 混编&lt;/strong&gt;&lt;span&gt;ODM · 混编&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;chip-state&quot;&gt;A 组&lt;/span&gt;&lt;/div&gt;
+          &lt;div class=&quot;team-chip grp-a&quot;&gt;&lt;span class=&quot;chip-index&quot;&gt;06&lt;/span&gt;&lt;span class=&quot;chip-copy&quot;&gt;&lt;strong&gt;AMD&lt;/strong&gt;&lt;span&gt;AMD · AMD&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;chip-state&quot;&gt;A 组&lt;/span&gt;&lt;/div&gt;
           &lt;div class=&quot;team-chip grp-bye&quot;&gt;&lt;span class=&quot;chip-index&quot;&gt;07&lt;/span&gt;&lt;span class=&quot;chip-copy&quot;&gt;&lt;strong&gt;Omnic Dawn&lt;/strong&gt;&lt;span&gt;HP · CQ&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;chip-state&quot;&gt;直通 B&lt;/span&gt;&lt;/div&gt;
         &lt;/div&gt;
       &lt;/article&gt;
@@ -2294,7 +2319,7 @@
           &lt;p&gt;守望先锋 · 两轮晋级赛制&lt;/p&gt;
         &lt;/div&gt;
         &lt;ol class=&quot;rule-list&quot;&gt;
-          &lt;li&gt;&lt;b&gt;第一轮（7/16—7/23）：&lt;/b&gt;A 组 2 场：扬名立万 vs 跨公司混编（M1）、SHP vs 里長 bro（M2）；B 组 1 场：ODM混编 vs AMD（M3）；Omnic Dawn 直接轮空晋级第二轮。&lt;/li&gt;
+          &lt;li&gt;&lt;b&gt;第一轮（7/16—7/23）：&lt;/b&gt;A 组 2 场：扬名立万 vs 跨公司混编（M1）、ODM混编 vs AMD（M2）；B 组 1 场：SHP vs 里長 bro（M3）；Omnic Dawn 直接轮空晋级第二轮。&lt;/li&gt;
           &lt;li&gt;&lt;b&gt;第二轮（7/24—7/31）：&lt;/b&gt;M4：M1胜者 vs M2胜者，决出 A 组代表队进总决赛。M5：M3胜者 vs Omnic Dawn，决出 B 组代表队进总决赛。&lt;/li&gt;
           &lt;li&gt;&lt;b&gt;总决赛（8月19日）：&lt;/b&gt;M6：A 组代表（M4 胜者）对阵 B 组代表（M5 胜者），决出最终冠军。&lt;/li&gt;
         &lt;/ol&gt;
