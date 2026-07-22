@@ -474,7 +474,7 @@
 
     .competitor {
       display: grid;
-      grid-template-columns: 32px minmax(0, 1fr) auto;
+      grid-template-columns: minmax(0, 1fr) auto;
       column-gap: 8px;
       align-items: center; height: 36px;
       padding: 4px 12px 4px 8px;
@@ -484,6 +484,7 @@
     .competitor:last-child { border-bottom: 0; }
 
     .seed {
+      display: none;
       color: rgba(255, 255, 255, 0.48); font-family: var(--display);
       font-size: 9px; font-weight: 900; letter-spacing: 0.05em;
     }
@@ -1712,7 +1713,7 @@
     }
 
     .competitor {
-      display: grid; grid-template-columns: 32px minmax(0, 1fr) auto;
+      display: grid; grid-template-columns: minmax(0, 1fr) auto;
       column-gap: 8px;
       align-items: center; min-height: 36px;
       padding: 4px 12px 4px 8px;
@@ -1722,6 +1723,7 @@
     .competitor:last-child { border-bottom: 0; }
 
     .seed {
+      display: none;
       color: rgba(255, 255, 255, 0.48); font-family: var(--display);
       font-size: 9px; font-weight: 900; letter-spacing: 0.05em;
     }
@@ -2735,7 +2737,7 @@
     }
 
     .competitor {
-      display: grid; grid-template-columns: 32px minmax(0, 1fr);
+      display: grid; grid-template-columns: minmax(0, 1fr);
       align-items: center; height: 36px;
       padding: 4px 12px 4px 8px;
       border-bottom: 1px solid rgba(200, 160, 60, 0.1);
@@ -2744,6 +2746,7 @@
     .competitor:last-child { border-bottom: 0; }
 
     .seed {
+      display: none;
       color: rgba(200, 180, 80, 0.6); font-family: var(--display);
       font-size: 9px; font-weight: 900; letter-spacing: 0.05em;
     }
