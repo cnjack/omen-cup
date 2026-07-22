@@ -492,6 +492,7 @@
     }
 
     .competitor.winner .seed,
+    .competitor.loser .seed,
     .seed.win,
     .seed.bye {
       display: block;
@@ -505,8 +506,14 @@
       line-height: 1;
     }
 
-    .seed.bye::after {
+    .competitor.loser .seed::after {
       content: "BYE";
+      font-size: 9px;
+      line-height: 1;
+    }
+
+    .seed.bye::after {
+      content: "WIN";
       font-size: 9px;
       line-height: 1;
     }
@@ -1016,7 +1023,7 @@
           &lt;article class=&quot;match&quot; style=&quot;left:40px; top:120px; --order:1&quot; aria-label=&quot;M1&quot;&gt;
             &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M1&lt;/span&gt;&lt;small&gt;A 组 · 日落之城 · 7/20 19:00 · BO1&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
-              &lt;div class=&quot;competitor&quot;&gt;
+              &lt;div class=&quot;competitor loser&quot;&gt;
                 &lt;span class=&quot;seed&quot;&gt;IEC&lt;/span&gt;
                 &lt;span class=&quot;team-copy&quot;&gt;
                   &lt;strong class=&quot;team-name&quot;&gt;NGU&lt;/strong&gt;
@@ -1058,7 +1065,7 @@
           &lt;article class=&quot;match&quot; style=&quot;left:40px; top:432px; --order:3&quot; aria-label=&quot;M3&quot;&gt;
             &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M3&lt;/span&gt;&lt;small&gt;A 组 · 亚海悬城 · 7/21 20:00 · BO1&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
-              &lt;div class=&quot;competitor&quot;&gt;
+              &lt;div class=&quot;competitor loser&quot;&gt;
                 &lt;span class=&quot;seed&quot;&gt;DL&lt;/span&gt;
                 &lt;span class=&quot;team-copy&quot;&gt;
                   &lt;strong class=&quot;team-name&quot;&gt;争取不拿倒第一&lt;/strong&gt;
@@ -1150,14 +1157,14 @@
             &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M6&lt;/span&gt;&lt;small&gt;Round 2 · A 组抽签 · BO1&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor&quot;&gt;
-                &lt;span class=&quot;seed win&quot;&gt;A&lt;/span&gt;
+                &lt;span class=&quot;seed&quot;&gt;A&lt;/span&gt;
                 &lt;span class=&quot;team-copy&quot;&gt;
                   &lt;strong class=&quot;team-name&quot;&gt;抽签队伍 A&lt;/strong&gt;
                   &lt;small class=&quot;team-tag&quot;&gt;M1/M2/M3 胜者之一&lt;/small&gt;
                 &lt;/span&gt;
               &lt;/div&gt;
               &lt;div class=&quot;competitor&quot;&gt;
-                &lt;span class=&quot;seed win&quot;&gt;B&lt;/span&gt;
+                &lt;span class=&quot;seed&quot;&gt;B&lt;/span&gt;
                 &lt;span class=&quot;team-copy&quot;&gt;
                   &lt;strong class=&quot;team-name&quot;&gt;抽签队伍 B&lt;/strong&gt;
                   &lt;small class=&quot;team-tag&quot;&gt;M1/M2/M3 胜者之一&lt;/small&gt;
@@ -1183,7 +1190,7 @@
             &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M7&lt;/span&gt;&lt;small&gt;Round 2 · B 组抽签 · BO1&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor&quot;&gt;
-                &lt;span class=&quot;seed win&quot;&gt;C&lt;/span&gt;
+                &lt;span class=&quot;seed&quot;&gt;C&lt;/span&gt;
                 &lt;span class=&quot;team-copy&quot;&gt;
                   &lt;strong class=&quot;team-name&quot;&gt;M4/M5 胜者之一&lt;/strong&gt;
                   &lt;small class=&quot;team-tag&quot;&gt;抽签决定&lt;/small&gt;
@@ -1204,7 +1211,7 @@
             &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M8&lt;/span&gt;&lt;small&gt;Semi Final · BO1&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor&quot;&gt;
-                &lt;span class=&quot;seed win&quot;&gt;W&lt;/span&gt;
+                &lt;span class=&quot;seed&quot;&gt;W&lt;/span&gt;
                 &lt;span class=&quot;team-copy&quot;&gt;
                   &lt;strong class=&quot;team-name&quot;&gt;M6 胜者&lt;/strong&gt;
                   &lt;small class=&quot;team-tag&quot;&gt;A 组 Round 2 Winner&lt;/small&gt;
@@ -1224,7 +1231,7 @@
             &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M9&lt;/span&gt;&lt;small&gt;Semi Final · BO1&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor&quot;&gt;
-                &lt;span class=&quot;seed win&quot;&gt;W&lt;/span&gt;
+                &lt;span class=&quot;seed&quot;&gt;W&lt;/span&gt;
                 &lt;span class=&quot;team-copy&quot;&gt;
                   &lt;strong class=&quot;team-name&quot;&gt;M7 胜者&lt;/strong&gt;
                   &lt;small class=&quot;team-tag&quot;&gt;B 组 Round 2 Winner&lt;/small&gt;
@@ -1245,14 +1252,14 @@
             &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M10&lt;/span&gt;&lt;small&gt;Grand Final · 8月20日 · BO3&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor&quot;&gt;
-                &lt;span class=&quot;seed win&quot;&gt;W&lt;/span&gt;
+                &lt;span class=&quot;seed&quot;&gt;W&lt;/span&gt;
                 &lt;span class=&quot;team-copy&quot;&gt;
                   &lt;strong class=&quot;team-name&quot;&gt;M8 胜者&lt;/strong&gt;
                   &lt;small class=&quot;team-tag&quot;&gt;Semi Final Winner A&lt;/small&gt;
                 &lt;/span&gt;
               &lt;/div&gt;
               &lt;div class=&quot;competitor&quot;&gt;
-                &lt;span class=&quot;seed win&quot;&gt;W&lt;/span&gt;
+                &lt;span class=&quot;seed&quot;&gt;W&lt;/span&gt;
                 &lt;span class=&quot;team-copy&quot;&gt;
                   &lt;strong class=&quot;team-name&quot;&gt;M9 胜者&lt;/strong&gt;
                   &lt;small class=&quot;team-tag&quot;&gt;Semi Final Winner B&lt;/small&gt;
@@ -1753,6 +1760,7 @@
     }
 
     .competitor.winner .seed,
+    .competitor.loser .seed,
     .seed.win,
     .seed.bye {
       display: block;
@@ -1766,8 +1774,14 @@
       line-height: 1;
     }
 
-    .seed.bye::after {
+    .competitor.loser .seed::after {
       content: "BYE";
+      font-size: 9px;
+      line-height: 1;
+    }
+
+    .seed.bye::after {
+      content: "WIN";
       font-size: 9px;
       line-height: 1;
     }
@@ -2212,7 +2226,7 @@
                 &lt;/span&gt;
                 &lt;span class=&quot;score&quot;&gt;2&lt;/span&gt;
               &lt;/div&gt;
-              &lt;div class=&quot;competitor&quot;&gt;
+              &lt;div class=&quot;competitor loser&quot;&gt;
                 &lt;span class=&quot;seed&quot;&gt;三方&lt;/span&gt;
                 &lt;span class=&quot;team-copy&quot;&gt;
                   &lt;strong class=&quot;team-name&quot;&gt;跨公司混编&lt;/strong&gt;
@@ -2247,7 +2261,7 @@
           &lt;article class=&quot;match two-line-head&quot; style=&quot;left:40px; top:520px; --order:3&quot; aria-label=&quot;M3&quot;&gt;
             &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M3&lt;/span&gt;&lt;small&gt;B 组 · 7月19日 13:00&lt;br&gt;哈瓦娜 / 国王大道 · BO3&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
-              &lt;div class=&quot;competitor&quot;&gt;
+              &lt;div class=&quot;competitor loser&quot;&gt;
                 &lt;span class=&quot;seed&quot;&gt;ODM&lt;/span&gt;
                 &lt;span class=&quot;team-copy&quot;&gt;
                   &lt;strong class=&quot;team-name&quot;&gt;ODM 混编&lt;/strong&gt;
@@ -2283,14 +2297,14 @@
             &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M4&lt;/span&gt;&lt;small&gt;A 组 · Round 2 · BO3&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor&quot;&gt;
-                &lt;span class=&quot;seed win&quot;&gt;W&lt;/span&gt;
+                &lt;span class=&quot;seed&quot;&gt;W&lt;/span&gt;
                 &lt;span class=&quot;team-copy&quot;&gt;
                   &lt;strong class=&quot;team-name&quot;&gt;M1 胜者&lt;/strong&gt;
                   &lt;small class=&quot;team-tag&quot;&gt;Group A Winner 1&lt;/small&gt;
                 &lt;/span&gt;
               &lt;/div&gt;
               &lt;div class=&quot;competitor&quot;&gt;
-                &lt;span class=&quot;seed win&quot;&gt;W&lt;/span&gt;
+                &lt;span class=&quot;seed&quot;&gt;W&lt;/span&gt;
                 &lt;span class=&quot;team-copy&quot;&gt;
                   &lt;strong class=&quot;team-name&quot;&gt;M2 胜者&lt;/strong&gt;
                   &lt;small class=&quot;team-tag&quot;&gt;Group A Winner 2&lt;/small&gt;
@@ -2324,14 +2338,14 @@
             &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M6&lt;/span&gt;&lt;small&gt;Grand Final · 8月19日 · BO5&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor&quot;&gt;
-                &lt;span class=&quot;seed win&quot;&gt;W&lt;/span&gt;
+                &lt;span class=&quot;seed&quot;&gt;W&lt;/span&gt;
                 &lt;span class=&quot;team-copy&quot;&gt;
                   &lt;strong class=&quot;team-name&quot;&gt;M4 胜者&lt;/strong&gt;
                   &lt;small class=&quot;team-tag&quot;&gt;Semi-final Winner A&lt;/small&gt;
                 &lt;/span&gt;
               &lt;/div&gt;
               &lt;div class=&quot;competitor&quot;&gt;
-                &lt;span class=&quot;seed win&quot;&gt;W&lt;/span&gt;
+                &lt;span class=&quot;seed&quot;&gt;W&lt;/span&gt;
                 &lt;span class=&quot;team-copy&quot;&gt;
                   &lt;strong class=&quot;team-name&quot;&gt;M5 胜者&lt;/strong&gt;
                   &lt;small class=&quot;team-tag&quot;&gt;Semi-final Winner B&lt;/small&gt;
@@ -2798,6 +2812,7 @@
     }
 
     .competitor.winner .seed,
+    .competitor.loser .seed,
     .seed.win,
     .seed.bye {
       display: block;
@@ -2811,8 +2826,14 @@
       line-height: 1;
     }
 
-    .seed.bye::after {
+    .competitor.loser .seed::after {
       content: "BYE";
+      font-size: 9px;
+      line-height: 1;
+    }
+
+    .seed.bye::after {
+      content: "WIN";
       font-size: 9px;
       line-height: 1;
     }
@@ -3298,7 +3319,7 @@
           &lt;article class=&quot;match&quot; style=&quot;left:40px; top:120px; --order:1&quot; aria-label=&quot;M1&quot;&gt;
             &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M1&lt;/span&gt;&lt;small&gt;A 组 · 艾欧尼亚 · 7/21 18:00 · BO1&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
-              &lt;div class=&quot;competitor&quot;&gt;
+              &lt;div class=&quot;competitor loser&quot;&gt;
                 &lt;span class=&quot;seed&quot;&gt;BRG1&lt;/span&gt;
                 &lt;span class=&quot;team-copy&quot;&gt;
                   &lt;strong class=&quot;team-name&quot;&gt;NextGen-高地保安队&lt;/strong&gt;
@@ -3337,7 +3358,7 @@
                   &lt;small class=&quot;team-tag&quot;&gt;ODM · Luxshare · 红方&lt;/small&gt;
                 &lt;/span&gt;
               &lt;/div&gt;
-              &lt;div class=&quot;competitor&quot;&gt;
+              &lt;div class=&quot;competitor loser&quot;&gt;
                 &lt;span class=&quot;seed&quot;&gt;ODM1&lt;/span&gt;
                 &lt;span class=&quot;team-copy&quot;&gt;
                   &lt;strong class=&quot;team-name&quot;&gt;ODM混编1&lt;/strong&gt;
@@ -3372,7 +3393,7 @@
           &lt;article class=&quot;match&quot; style=&quot;left:40px; top:680px; --order:5&quot; aria-label=&quot;M4&quot;&gt;
             &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M4&lt;/span&gt;&lt;small&gt;B 组 · 联盟四区 · 7/21 15:00 · BO1&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
-              &lt;div class=&quot;competitor&quot;&gt;
+              &lt;div class=&quot;competitor loser&quot;&gt;
                 &lt;span class=&quot;seed&quot;&gt;CQ&lt;/span&gt;
                 &lt;span class=&quot;team-copy&quot;&gt;
                   &lt;strong class=&quot;team-name&quot;&gt;重庆雄起队&lt;/strong&gt;
@@ -3412,7 +3433,7 @@
           &lt;article class=&quot;match&quot; style=&quot;left:40px; top:960px; --order:7&quot; aria-label=&quot;M6&quot;&gt;
             &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M6&lt;/span&gt;&lt;small&gt;B 组 · 艾欧尼亚 · 7/21 20:00 · BO1&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
-              &lt;div class=&quot;competitor&quot;&gt;
+              &lt;div class=&quot;competitor loser&quot;&gt;
                 &lt;span class=&quot;seed&quot;&gt;MIX&lt;/span&gt;
                 &lt;span class=&quot;team-copy&quot;&gt;
                   &lt;strong class=&quot;team-name&quot;&gt;混编&lt;/strong&gt;
@@ -3474,7 +3495,7 @@
                 &lt;/span&gt;
               &lt;/div&gt;
               &lt;div class=&quot;competitor&quot;&gt;
-                &lt;span class=&quot;seed win&quot;&gt;W&lt;/span&gt;
+                &lt;span class=&quot;seed&quot;&gt;W&lt;/span&gt;
                 &lt;span class=&quot;team-copy&quot;&gt;
                   &lt;strong class=&quot;team-name&quot;&gt;M3 胜者&lt;/strong&gt;
                   &lt;small class=&quot;team-tag&quot;&gt;HQ / Quanta 胜出&lt;/small&gt;
@@ -3494,7 +3515,7 @@
                 &lt;/span&gt;
               &lt;/div&gt;
               &lt;div class=&quot;competitor&quot;&gt;
-                &lt;span class=&quot;seed win&quot;&gt;W&lt;/span&gt;
+                &lt;span class=&quot;seed&quot;&gt;W&lt;/span&gt;
                 &lt;span class=&quot;team-copy&quot;&gt;
                   &lt;strong class=&quot;team-name&quot;&gt;M5 胜者&lt;/strong&gt;
                   &lt;small class=&quot;team-tag&quot;&gt;TP / HSC 胜出&lt;/small&gt;
@@ -3529,14 +3550,14 @@
             &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M11&lt;/span&gt;&lt;small&gt;A 组 · 半决赛 · BO1&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor&quot;&gt;
-                &lt;span class=&quot;seed win&quot;&gt;W&lt;/span&gt;
+                &lt;span class=&quot;seed&quot;&gt;W&lt;/span&gt;
                 &lt;span class=&quot;team-copy&quot;&gt;
                   &lt;strong class=&quot;team-name&quot;&gt;M7 胜者&lt;/strong&gt;
                   &lt;small class=&quot;team-tag&quot;&gt;A 组 R2 Winner A&lt;/small&gt;
                 &lt;/span&gt;
               &lt;/div&gt;
               &lt;div class=&quot;competitor&quot;&gt;
-                &lt;span class=&quot;seed win&quot;&gt;W&lt;/span&gt;
+                &lt;span class=&quot;seed&quot;&gt;W&lt;/span&gt;
                 &lt;span class=&quot;team-copy&quot;&gt;
                   &lt;strong class=&quot;team-name&quot;&gt;M8 胜者&lt;/strong&gt;
                   &lt;small class=&quot;team-tag&quot;&gt;A 组 R2 Winner B&lt;/small&gt;
@@ -3549,14 +3570,14 @@
             &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M12&lt;/span&gt;&lt;small&gt;B 组 · 半决赛 · BO1&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor&quot;&gt;
-                &lt;span class=&quot;seed win&quot;&gt;W&lt;/span&gt;
+                &lt;span class=&quot;seed&quot;&gt;W&lt;/span&gt;
                 &lt;span class=&quot;team-copy&quot;&gt;
                   &lt;strong class=&quot;team-name&quot;&gt;M9 胜者&lt;/strong&gt;
                   &lt;small class=&quot;team-tag&quot;&gt;B 组 R2 Winner A&lt;/small&gt;
                 &lt;/span&gt;
               &lt;/div&gt;
               &lt;div class=&quot;competitor&quot;&gt;
-                &lt;span class=&quot;seed win&quot;&gt;W&lt;/span&gt;
+                &lt;span class=&quot;seed&quot;&gt;W&lt;/span&gt;
                 &lt;span class=&quot;team-copy&quot;&gt;
                   &lt;strong class=&quot;team-name&quot;&gt;M10 胜者&lt;/strong&gt;
                   &lt;small class=&quot;team-tag&quot;&gt;B 组 R2 Winner B&lt;/small&gt;
@@ -3571,14 +3592,14 @@
             &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M13&lt;/span&gt;&lt;small&gt;Grand Final · 8月20日 · BO3&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor&quot;&gt;
-                &lt;span class=&quot;seed win&quot;&gt;W&lt;/span&gt;
+                &lt;span class=&quot;seed&quot;&gt;W&lt;/span&gt;
                 &lt;span class=&quot;team-copy&quot;&gt;
                   &lt;strong class=&quot;team-name&quot;&gt;M11 胜者&lt;/strong&gt;
                   &lt;small class=&quot;team-tag&quot;&gt;A 组代表队&lt;/small&gt;
                 &lt;/span&gt;
               &lt;/div&gt;
               &lt;div class=&quot;competitor&quot;&gt;
-                &lt;span class=&quot;seed win&quot;&gt;W&lt;/span&gt;
+                &lt;span class=&quot;seed&quot;&gt;W&lt;/span&gt;
                 &lt;span class=&quot;team-copy&quot;&gt;
                   &lt;strong class=&quot;team-name&quot;&gt;M12 胜者&lt;/strong&gt;
                   &lt;small class=&quot;team-tag&quot;&gt;B 组代表队&lt;/small&gt;
