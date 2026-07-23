@@ -620,5 +620,205 @@
 
   <div class="footer">OMEN CUP 2026 · 赛程如有变动以官方公告为准</div>
 
+  <script>
+    (function () {
+      var matchChipSelector = '.chip.val, .chip.ow2, .chip.lol';
+      var specialChipSelector = '.chip.all, .chip.val-f, .chip.ow2-f, .chip.lol-f';
+      var panelConfigs = [
+        { panelId: 'panel-valorant', chipClass: 'val', prefix: 'VAL' },
+        { panelId: 'panel-ow2', chipClass: 'ow2', prefix: 'OW' },
+        { panelId: 'panel-lol', chipClass: 'lol', prefix: 'LOL' }
+      ];
+      var dynamicOrder = { ow2: 0, val: 1, lol: 2 };
+      var fallbackDetails = new Map();
+      var dayCells = new Map();
+      var calendarCells = Array.prototype.slice.call(document.querySelectorAll('.cell'));
+
+      document.querySelectorAll(matchChipSelector).forEach(function (chip) {
+        var title = chip.querySelector('strong');
+        var detail = chip.querySelector('small');
+        if (title) {
+          fallbackDetails.set(
+            title.textContent.trim(),
+            detail ? detail.textContent.trim() : ''
+          );
+        }
+      });
+
+      calendarCells.forEach(function (cell) {
+        var label = cell.querySelector('.dn');
+        if (label) {
+          dayCells.set(label.textContent.trim(), cell);
+        }
+      });
+
+      function parseSchedule(raw) {
+        var tokens = raw.split(' · ').map(function (token) {
+          return token.trim();
+        }).filter(Boolean);
+        var slashMatch = raw.match(/(\d{1,2})\/(\d{1,2})\s+(\d{1,2}:\d{2})/);
+        var chineseMatch = raw.match(/(\d{1,2})月(\d{1,2})日\s+(\d{1,2}:\d{2})/);
+        var match = slashMatch || chineseMatch;
+
+        if (!match) {
+          return null;
+        }
+
+        var month = Number(match[1]);
+        var day = Number(match[2]);
+        var time = match[3];
+        var dateTokenIndex = tokens.findIndex(function (token) {
+          return token.indexOf(time) !== -1;
+        });
+        var location = '';
+
+        if (dateTokenIndex > 0 && !/^BO\d$/i.test(tokens[dateTokenIndex - 1]) && tokens[dateTokenIndex - 1].indexOf('组') === -1) {
+          location = tokens[dateTokenIndex - 1];
+        }
+
+        if (!location && dateTokenIndex >= 0 && tokens[dateTokenIndex + 1] && !/^BO\d$/i.test(tokens[dateTokenIndex + 1])) {
+          location = tokens[dateTokenIndex + 1];
+        }
+
+        return {
+          dateKey: month + '/' + day,
+          time: time,
+          location: location
+        };
+      }
+
+      function extractEvents(indexDoc) {
+        var events = [];
+        var order = 0;
+
+        panelConfigs.forEach(function (config) {
+          var iframe = indexDoc.querySelector('#' + config.panelId + ' iframe');
+          var srcdoc = iframe ? iframe.getAttribute('srcdoc') : '';
+
+          if (!srcdoc) {
+            return;
+          }
+
+          var frameDoc = new DOMParser().parseFromString(srcdoc, 'text/html');
+          frameDoc.querySelectorAll('.match-head').forEach(function (head) {
+            var matchName = head.querySelector('span');
+            var matchMeta = head.querySelector('small');
+            var rawMeta;
+            var parsed;
+            var title;
+            var detail;
+
+            if (!matchName || !matchMeta) {
+              return;
+            }
+
+            rawMeta = matchMeta.innerHTML
+              .replace(/<br\s*\/?>/gi, ' · ')
+              .replace(/&nbsp;/gi, ' ')
+              .replace(/\s+/g, ' ')
+              .trim();
+            parsed = parseSchedule(rawMeta);
+
+            if (!parsed) {
+              return;
+            }
+
+            title = config.prefix + ' ' + matchName.textContent.trim() + ' · ' + parsed.time;
+            detail = parsed.location || fallbackDetails.get(title) || '';
+
+            events.push({
+              chipClass: config.chipClass,
+              dateKey: parsed.dateKey,
+              detail: detail,
+              order: order++,
+              time: parsed.time,
+              title: title
+            });
+          });
+        });
+
+        return events;
+      }
+
+      function applyEvents(events) {
+        var grouped = new Map();
+
+        calendarCells.forEach(function (cell) {
+          cell.querySelectorAll(matchChipSelector).forEach(function (chip) {
+            chip.remove();
+          });
+
+          if (!cell.querySelector(specialChipSelector)) {
+            cell.classList.remove('has-events');
+          }
+        });
+
+        events.forEach(function (event) {
+          if (!grouped.has(event.dateKey)) {
+            grouped.set(event.dateKey, []);
+          }
+
+          grouped.get(event.dateKey).push(event);
+        });
+
+        grouped.forEach(function (items, dateKey) {
+          var cell = dayCells.get(dateKey);
+
+          if (!cell) {
+            return;
+          }
+
+          items.sort(function (left, right) {
+            if (left.time !== right.time) {
+              return left.time.localeCompare(right.time);
+            }
+
+            if (left.chipClass !== right.chipClass) {
+              return dynamicOrder[left.chipClass] - dynamicOrder[right.chipClass];
+            }
+
+            return left.order - right.order;
+          });
+
+          items.forEach(function (item) {
+            var chip = document.createElement('span');
+            var strong = document.createElement('strong');
+
+            chip.className = 'chip ' + item.chipClass;
+            strong.textContent = item.title;
+            chip.appendChild(strong);
+
+            if (item.detail) {
+              var small = document.createElement('small');
+              small.textContent = item.detail;
+              chip.appendChild(small);
+            }
+
+            cell.appendChild(chip);
+          });
+
+          cell.classList.add('has-events');
+          cell.classList.remove('quiet');
+        });
+      }
+
+      fetch(new URL('index.html', window.location.href).toString(), { cache: 'no-store' })
+        .then(function (response) {
+          if (!response.ok) {
+            throw new Error('Failed to load index.html');
+          }
+
+          return response.text();
+        })
+        .then(function (html) {
+          var indexDoc = new DOMParser().parseFromString(html, 'text/html');
+          applyEvents(extractEvents(indexDoc));
+        })
+        .catch(function (error) {
+          console.warn('Calendar sync skipped:', error);
+        });
+    })();
+  </script>
+
 </body>
 </html>
