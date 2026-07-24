@@ -802,21 +802,31 @@
         });
       }
 
-      fetch(new URL('index.html', window.location.href).toString(), { cache: 'no-store' })
-        .then(function (response) {
-          if (!response.ok) {
-            throw new Error('Failed to load index.html');
-          }
+      window.addEventListener('message', function (event) {
+        if (!event.data || event.data.type !== 'omen-cup-calendar-sync' || !Array.isArray(event.data.events)) {
+          return;
+        }
 
-          return response.text();
-        })
-        .then(function (html) {
-          var indexDoc = new DOMParser().parseFromString(html, 'text/html');
-          applyEvents(extractEvents(indexDoc));
-        })
-        .catch(function (error) {
-          console.warn('Calendar sync skipped:', error);
-        });
+        applyEvents(event.data.events);
+      });
+
+      if (/^https?:$/i.test(window.location.protocol)) {
+        fetch(new URL('index.html', window.location.href).toString(), { cache: 'no-store' })
+          .then(function (response) {
+            if (!response.ok) {
+              throw new Error('Failed to load index.html');
+            }
+
+            return response.text();
+          })
+          .then(function (html) {
+            var indexDoc = new DOMParser().parseFromString(html, 'text/html');
+            applyEvents(extractEvents(indexDoc));
+          })
+          .catch(function (error) {
+            console.warn('Calendar sync skipped:', error);
+          });
+      }
     })();
   </script>
 
