@@ -2801,7 +2801,9 @@
     }
 
     .competitor {
-      display: grid; grid-template-columns: auto minmax(0, 1fr);
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      column-gap: 8px;
       align-items: center; height: 36px;
       padding: 4px 12px 4px 8px;
       border-bottom: 1px solid rgba(200, 160, 60, 0.1);
