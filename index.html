@@ -2300,7 +2300,7 @@
 
           &lt;!-- ── ROUND 2 ── --&gt;
           &lt;article class=&quot;match flow&quot; style=&quot;left:420px; top:240px; --order:5&quot; aria-label=&quot;M4&quot;&gt;
-            &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M4&lt;/span&gt;&lt;small&gt;A 组 · Round 2 · BO3&lt;/small&gt;&lt;/div&gt;
+            &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M4&lt;/span&gt;&lt;small&gt;A 组 · 7/29 20:30 · BO3&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor&quot;&gt;
                 &lt;span class=&quot;seed&quot;&gt;DL&lt;/span&gt;
@@ -2320,7 +2320,7 @@
           &lt;/article&gt;
 
           &lt;article class=&quot;match flow&quot; style=&quot;left:420px; top:570px; --order:6&quot; aria-label=&quot;M5&quot;&gt;
-            &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M5&lt;/span&gt;&lt;small&gt;B 组 · Round 2 · BO3&lt;/small&gt;&lt;/div&gt;
+            &lt;div class=&quot;match-head&quot;&gt;&lt;span&gt;M5&lt;/span&gt;&lt;small&gt;B 组 · 8/2 13:00 · BO3&lt;/small&gt;&lt;/div&gt;
             &lt;div class=&quot;match-body&quot;&gt;
               &lt;div class=&quot;competitor&quot;&gt;
                 &lt;span class=&quot;seed&quot;&gt;AMD&lt;/span&gt;
@@ -2804,7 +2804,7 @@
       display: grid;
       grid-template-columns: auto minmax(0, 1fr) auto;
       column-gap: 8px;
-      align-items: center; height: 36px;
+      align-items: center; min-height: 36px;
       padding: 4px 12px 4px 8px;
       border-bottom: 1px solid rgba(200, 160, 60, 0.1);
     }
@@ -2861,19 +2861,25 @@
     }
 
     .score {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
       justify-self: end;
-      min-width: 18px;
+      width: 32px;
+      min-width: 32px;
       color: rgba(240, 230, 211, 0.56);
       font-family: var(--display);
-      font-size: 16px;
+      font-size: 11px;
       font-weight: 900;
+      letter-spacing: 0.08em;
       line-height: 1;
       text-align: right;
+      white-space: nowrap;
     }
 
     .competitor.winner .score {
-      color: #f0e6d3;
-      text-shadow: 0 0 12px rgba(200, 155, 60, 0.3);
+      color: #d4b15a;
+      text-shadow: 0 0 12px rgba(212, 177, 90, 0.28);
     }
 
     /* Flow/R2+ matches */
@@ -3349,6 +3355,7 @@
                   &lt;strong class=&quot;team-name&quot;&gt;NextGen-高地保安队&lt;/strong&gt;
                   &lt;small class=&quot;team-tag&quot;&gt;HP · BRG1 · 红方&lt;/small&gt;
                 &lt;/span&gt;
+                &lt;span class=&quot;score&quot;&gt;BYE&lt;/span&gt;
               &lt;/div&gt;
               &lt;div class=&quot;competitor winner&quot;&gt;
                 &lt;span class=&quot;seed win&quot;&gt;BRG2&lt;/span&gt;
@@ -3390,6 +3397,7 @@
                   &lt;strong class=&quot;team-name&quot;&gt;ODM混编1&lt;/strong&gt;
                   &lt;small class=&quot;team-tag&quot;&gt;ODM · ODM1 · 蓝方&lt;/small&gt;
                 &lt;/span&gt;
+                &lt;span class=&quot;score&quot;&gt;BYE&lt;/span&gt;
               &lt;/div&gt;
             &lt;/div&gt;
           &lt;/article&gt;
@@ -3403,6 +3411,7 @@
                   &lt;strong class=&quot;team-name&quot;&gt;锐勤&lt;/strong&gt;
                   &lt;small class=&quot;team-tag&quot;&gt;ODM · HQ&lt;/small&gt;
                 &lt;/span&gt;
+                &lt;span class=&quot;score&quot;&gt;BYE&lt;/span&gt;
               &lt;/div&gt;
               &lt;div class=&quot;competitor winner&quot;&gt;
                 &lt;span class=&quot;seed win&quot;&gt;QTA&lt;/span&gt;
@@ -3426,6 +3435,7 @@
                   &lt;strong class=&quot;team-name&quot;&gt;重庆雄起队&lt;/strong&gt;
                   &lt;small class=&quot;team-tag&quot;&gt;HP · CQ · 红方&lt;/small&gt;
                 &lt;/span&gt;
+                &lt;span class=&quot;score&quot;&gt;BYE&lt;/span&gt;
               &lt;/div&gt;
               &lt;div class=&quot;competitor winner&quot;&gt;
                 &lt;span class=&quot;seed win&quot;&gt;DL&lt;/span&gt;
@@ -3447,6 +3457,7 @@
                   &lt;strong class=&quot;team-name&quot;&gt;我们来蹭饭的&lt;/strong&gt;
                   &lt;small class=&quot;team-tag&quot;&gt;HP · TP&lt;/small&gt;
                 &lt;/span&gt;
+                &lt;span class=&quot;score&quot;&gt;BYE&lt;/span&gt;
               &lt;/div&gt;
               &lt;div class=&quot;competitor winner&quot;&gt;
                 &lt;span class=&quot;seed win&quot;&gt;HSC&lt;/span&gt;
@@ -3468,6 +3479,7 @@
                   &lt;strong class=&quot;team-name&quot;&gt;混编&lt;/strong&gt;
                   &lt;small class=&quot;team-tag&quot;&gt;HP+ODM · 混编 · 蓝方&lt;/small&gt;
                 &lt;/span&gt;
+                &lt;span class=&quot;score&quot;&gt;BYE&lt;/span&gt;
               &lt;/div&gt;
               &lt;div class=&quot;competitor winner&quot;&gt;
                 &lt;span class=&quot;seed win&quot;&gt;AMD&lt;/span&gt;
