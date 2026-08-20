@@ -703,12 +703,17 @@
           frameDoc.querySelectorAll('.match-head').forEach(function (head) {
             var matchName = head.querySelector('span');
             var matchMeta = head.querySelector('small');
+            var matchCard = head.closest('.match');
             var rawMeta;
             var parsed;
             var title;
             var detail;
 
             if (!matchName || !matchMeta) {
+              return;
+            }
+
+            if (matchCard && matchCard.classList.contains('final')) {
               return;
             }
 
