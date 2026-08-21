@@ -633,6 +633,34 @@
       var fallbackDetails = new Map();
       var dayCells = new Map();
       var calendarCells = Array.prototype.slice.call(document.querySelectorAll('.cell'));
+      var fallbackEvents = [
+        { chipClass: 'val', dateKey: '7/20', detail: '日落之城', order: 0, time: '19:00', title: 'VAL M1 · 19:00' },
+        { chipClass: 'val', dateKey: '7/22', detail: '亚海悬城', order: 1, time: '18:00', title: 'VAL M2 · 18:00' },
+        { chipClass: 'val', dateKey: '7/21', detail: '亚海悬城', order: 2, time: '20:00', title: 'VAL M3 · 20:00' },
+        { chipClass: 'val', dateKey: '7/23', detail: '亚海悬城', order: 3, time: '9:30', title: 'VAL M4 · 9:30' },
+        { chipClass: 'val', dateKey: '7/20', detail: '亚海悬城', order: 4, time: '20:00', title: 'VAL M5 · 20:00' },
+        { chipClass: 'val', dateKey: '7/28', detail: '亚海悬城', order: 5, time: '10:00', title: 'VAL M6 · 10:00' },
+        { chipClass: 'val', dateKey: '7/26', detail: '霓虹町', order: 6, time: '19:00', title: 'VAL M7 · 19:00' },
+        { chipClass: 'val', dateKey: '7/29', detail: '霓虹町', order: 7, time: '22:00', title: 'VAL M8 · 22:00' },
+        { chipClass: 'val', dateKey: '8/2', detail: '隐世修所', order: 8, time: '21:30', title: 'VAL M9 · 21:30' },
+        { chipClass: 'ow2', dateKey: '7/19', detail: '漓江塔 / 国王大道', order: 9, time: '20:00', title: 'OW M1 · 20:00' },
+        { chipClass: 'ow2', dateKey: '7/23', detail: '绿洲城 / 国王大道', order: 10, time: '18:30', title: 'OW M2 · 18:30' },
+        { chipClass: 'ow2', dateKey: '7/19', detail: '哈瓦娜 / 国王大道', order: 11, time: '13:00', title: 'OW M3 · 13:00' },
+        { chipClass: 'ow2', dateKey: '7/29', detail: '', order: 12, time: '20:00', title: 'OW M4 · 20:00' },
+        { chipClass: 'ow2', dateKey: '8/2', detail: '', order: 13, time: '13:00', title: 'OW M5 · 13:00' },
+        { chipClass: 'lol', dateKey: '7/21', detail: '艾欧尼亚', order: 14, time: '18:00', title: 'LOL M1 · 18:00' },
+        { chipClass: 'lol', dateKey: '7/21', detail: '艾欧尼亚', order: 15, time: '20:00', title: 'LOL M2 · 20:00' },
+        { chipClass: 'lol', dateKey: '7/23', detail: '艾欧尼亚', order: 16, time: '18:30', title: 'LOL M3 · 18:30' },
+        { chipClass: 'lol', dateKey: '7/21', detail: '联盟四区', order: 17, time: '15:00', title: 'LOL M4 · 15:00' },
+        { chipClass: 'lol', dateKey: '7/22', detail: '台服', order: 18, time: '14:00', title: 'LOL M5 · 14:00' },
+        { chipClass: 'lol', dateKey: '7/21', detail: '艾欧尼亚', order: 19, time: '20:00', title: 'LOL M6 · 20:00' },
+        { chipClass: 'lol', dateKey: '7/28', detail: '', order: 20, time: '16:00', title: 'LOL M7 · 16:00' },
+        { chipClass: 'lol', dateKey: '7/28', detail: '', order: 21, time: '20:00', title: 'LOL M8 · 20:00' },
+        { chipClass: 'lol', dateKey: '7/31', detail: '', order: 22, time: '20:00', title: 'LOL M9 · 20:00' },
+        { chipClass: 'lol', dateKey: '7/28', detail: '', order: 23, time: '19:00', title: 'LOL M10 · 19:00' },
+        { chipClass: 'lol', dateKey: '7/29', detail: '', order: 24, time: '16:00', title: 'LOL M11 · 16:00' },
+        { chipClass: 'lol', dateKey: '7/31', detail: '', order: 25, time: '21:30', title: 'LOL M12 · 21:30' }
+      ];
 
       document.querySelectorAll(matchChipSelector).forEach(function (chip) {
         var title = chip.querySelector('strong');
@@ -806,6 +834,8 @@
           cell.classList.remove('quiet');
         });
       }
+
+      applyEvents(fallbackEvents);
 
       window.addEventListener('message', function (event) {
         if (!event.data || event.data.type !== 'omen-cup-calendar-sync' || !Array.isArray(event.data.events)) {
